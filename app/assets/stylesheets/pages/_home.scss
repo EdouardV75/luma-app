@@ -1,19 +1,22 @@
 // Specific CSS for your home-page
 h1  {
-  color: $dark-gray;
+  color: $dark-blue;
 }
 
 h2 {
   color: $gray;
+  font-weight: bold;
 }
 
 h3 {
   color : $dark-blue;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
 }
 
 p {
   color: $light-blue;
-
+  font-weight: medium;
 }
 
 
