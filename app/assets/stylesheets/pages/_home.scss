@@ -1,1 +1,44 @@
 // Specific CSS for your home-page
+h1  {
+  color: $dark-gray;
+}
+
+h2 {
+  color: $gray;
+}
+
+h3 {
+  color : $dark-blue;
+}
+
+p {
+  color: $light-blue;
+
+}
+
+
+h4 {
+  color: $dark-gray;
+}
+.btn {
+  height: 60px;
+  border-radius: 5px;
+  background-color: $light-blue;
+  color: white;
+  border: none;
+}
+
+.wrapper {
+  background-color: $light-pink;
+  height: calc(100vh - 70px - 70px);
+}
+
+.container {
+  height: calc(100vh - 70px - 70px);
+}
+
+
+.footer {
+  height: 70px;
+  background-color: $light-blue;
+}
