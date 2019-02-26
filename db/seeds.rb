@@ -20,20 +20,20 @@ Gastronomie = Category.create!(name: 'Gastronomie')
 Sport = Category.create!(name: 'Sport')
 
 puts 'Creating experiences...'
-Experience.create!(name: 'HintHunt',
+Experience.create!(name: 'Les meilleurs Escapes Games',
   luma_price: '69',
   public_price: '110',
   validity_date: '31/12/19',
   description: "HintHunt vous propose de vivre une aventure unique et hors du commun.
 Enfermés dans une salle avec votre équipe de 3 à 5 joueurs, vous avez 60 minutes pour trouver le moyen de vous échapper !
 A vous de trouver les indices cachés dans la salle et de résoudre ensemble les énigmes qui vous permettront de vous évader ! Une expérience inoubliable dans laquelle rapidité, logique, et esprit d'équipe seront vos meilleurs alliés",
-  partner_logo: 'images/HintHunt_logo',
+  partner_logo: 'images/hinthunt_logo',
   category_id: '2',
   partner_name: 'HintHunt',
-  photo_experience: 'images/HintHunt_xp',
+  photo_experience: 'images/hinthunt_xp',
 )
 
-Experience.create!(name: 'Incarna',
+Experience.create!(name: 'Une expérience unique de Réalité Virtuelle',
   luma_price: '19,90',
   public_price: '29,90',
   validity_date: '31/12/19',
@@ -44,6 +44,28 @@ Ce baptême du feu ne sera pas de tout repos, mais il ne sera que la première �
   category_id: '2',
   partner_name: 'Incarana',
   photo_experience: 'images/incarna_xp',
+)
+
+Experience.create!(name: "Une année avec les meilleurs films",
+  luma_price: '49,90',
+  public_price: '71,88',
+  validity_date: '31/12/19',
+  description: "Chaque jour, nous choisissons un nouveau film et vous avez un mois entier pour le regarder. Il y aura donc toujours 30 films parmi lesquels vous pourrez faire votre choix !",
+  partner_logo: 'images/mubi_logo',
+  category_id: '1',
+  partner_name: 'Mubi',
+  photo_experience: 'images/mubi_xp',
+)
+
+Experience.create!(name: "Un pass de 10 places de Cinéma",
+  luma_price: '59,90',
+  public_price: '100',
+  validity_date: '31/12/19',
+  description: "Profitez de 10 places de cinéma chez notre partenaire ",
+  partner_logo: 'images/ugc_logo',
+  category_id: '1',
+  partner_name: 'UGC',
+  photo_experience: 'images/ugc_xp',
 )
 
 # Jeux
