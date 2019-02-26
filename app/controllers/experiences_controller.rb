@@ -1,7 +1,10 @@
 class ExperiencesController < ApplicationController
   def index
-    skip_policy_scope
-    @experiences = Experience.all
+    if params[:query].present?
+      @experiences = Experience.global_search(params[:query])
+    else
+      @experiences = Experience.all
+    end
   end
 
   def show
