@@ -119,31 +119,162 @@ Experience.create!(name: "Offre un arbre",
   photo_experience: 'images/ecotree_xp.jpg',
 )
 
-# #Beauté
-# Birchbox
-# Horace
+#Beauté
+Experience.create!(name: "Votre box beauté",
+  luma_price: '8',
+  public_price: '13',
+  validity_date: '31/12/19',
+  description: "Que vous cherchiez la parfaite crème qui apaisera votre peau sensible, le spray cheveux qui saura dompter votre crinière ou le rouge à lèvres de vos rêves, on s’occupe de tout ! Tous nos produits sont sélectionnés avec soin.",
+  partner_logo: 'images/birchbox_logo.png',
+  category_id: '5',
+  partner_name: 'Birchbox',
+  photo_experience: 'images/birchbox_xp.jpg',
+)
 
-# #Déco
-# Bergamote
-# Artsper
-# YellowKorner
+Experience.create!(name: "Votre box de soin pour homme",
+  luma_price: '8',
+  public_price: '13',
+  validity_date: '31/12/19',
+  description: "Que vous cherchiez la parfaite crème qui apaisera votre peau sensible, le spray cheveux qui saura dompter votre crinière ou le rouge à lèvres de vos rêves, on s’occupe de tout ! Tous nos produits sont sélectionnés avec soin.",
+  partner_logo: 'images/horace_logo.jpg',
+  category_id: '5',
+  partner_name: 'Horace',
+  photo_experience: 'images/horace_xp.jpg',
+)
 
-# #Presse
-# Pressmium
-# Les Others
-# Usbek et Rica
+#Déco
+Experience.create!(name: "Votre abonnement mensuel de fleurs",
+  luma_price: '8',
+  public_price: '13',
+  validity_date: '31/12/19',
+  description: "Que vous cherchiez la parfaite crème qui apaisera votre peau sensible, le spray cheveux qui saura dompter votre crinière ou le rouge à lèvres de vos rêves, on s’occupe de tout ! Tous nos produits sont sélectionnés avec soin.",
+  partner_logo: 'images/bergamotte_logo.jpg',
+  category_id: '6',
+  partner_name: 'Bergamotte',
+  photo_experience: 'images/bergamotte_xp.jpg',
+)
 
-# #Culture
-# Culturesecrets
-# Otheatro
-# Pass
+Experience.create!(name: "Votre oeuvre d'art préférée",
+  luma_price: '8',
+  public_price: '13',
+  validity_date: '31/12/19',
+  description: "Que vous cherchiez la parfaite crème qui apaisera votre peau sensible, le spray cheveux qui saura dompter votre crinière ou le rouge à lèvres de vos rêves, on s’occupe de tout ! Tous nos produits sont sélectionnés avec soin.",
+  partner_logo: 'images/artsper_logo.jpg',
+  category_id: '6',
+  partner_name: 'Artsper',
+  photo_experience: 'images/artsper_xp.jpg',
+)
+
+Experience.create!(name: "Une photographie en édition limitée",
+  luma_price: '75',
+  public_price: '89',
+  validity_date: '31/12/19',
+  description: "Photographie d'art en format classique, 24x32cm avec cadre noir. Œuvre en édition limitée et numérotée avec certificat d'authenticité",
+  partner_logo: 'images/yellowkorner_logo.jpg',
+  category_id: '6',
+  partner_name: 'Yellowkorner',
+  photo_experience: 'images/yellowkorner_xp.jpg',
+)
+
+#Presse
+Experience.create!(name: "Un abonnement annuel pour Usbek & Rica",
+  luma_price: '18',
+  public_price: '24',
+  validity_date: '31/12/19',
+  description: "Trois numéros du magazine. Le magazine qui explore le futur. Tous les futurs : ceux qui nous font peur et ceux dont on rêve.",
+  partner_logo: 'images/usbekrica_logo.png',
+  category_id: '7',
+  partner_name: 'Usbek & Rica',
+  photo_experience: 'images/usbekrica_xp.jpg',
+)
+
+#Culture
+Experience.create!(name: "Le meilleur de la culture",
+  luma_price: '8',
+  public_price: '13',
+  validity_date: '31/12/19',
+  description: "Que vous cherchiez la parfaite crème qui apaisera votre peau sensible, le spray cheveux qui saura dompter votre crinière ou le rouge à lèvres de vos rêves, on s’occupe de tout ! Tous nos produits sont sélectionnés avec soin.",
+  partner_logo: 'images/culturesecrets_logo.png',
+  category_id: '8',
+  partner_name: 'CultureSecrets',
+  photo_experience: 'images/culturesecrets_xp.jpg',
+)
+
+Experience.create!(name: "Une box 6 spectacles",
+  luma_price: '69',
+  public_price: '99',
+  validity_date: '31/12/19',
+  description: "Que vous cherchiez la parfaite crème qui apaisera votre peau sensible, le spray cheveux qui saura dompter votre crinière ou le rouge à lèvres de vos rêves, on s’occupe de tout ! Tous nos produits sont sélectionnés avec soin.",
+  partner_logo: 'images/otheatro_logo.png',
+  category_id: '8',
+  partner_name: 'Otheatro',
+  photo_experience: 'images/otheatro_xp.jpg',
+)
 
 # #Gastronomie
-# La Ruche qui dit oui
-# Atelier Café Lomi
-# Le Petit Ballon
-# Kawa
+Experience.create!(name: "Mon panier de fruits et légumes",
+  luma_price: '20',
+  public_price: '30',
+  validity_date: '31/12/19',
+  description: "Des fruits et légumes de saison",
+  partner_logo: 'images/laruche_logo.png',
+  category_id: '9',
+  partner_name: 'La ruche qui dit oui',
+  photo_experience: 'images/laruche_xp.jpg',
+)
+
+Experience.create!(name: "Une formation de 2h sur le café",
+  luma_price: '60',
+  public_price: '72',
+  validity_date: '31/12/19',
+  description: "Nous vous proposons un atelier Culture Café de 3 heures qui vous permettra de parcourir les essentiels de cet univers à travers l'histoire du café de spécialité, la chaîne de ses métiers, beaucoup d’images & une dégustation de nombreux cafés !",
+  partner_logo: 'images/lomi_logo.jpg',
+  category_id: '9',
+  partner_name: 'Café Lomi',
+  photo_experience: 'images/lomi_xp.jpg',
+)
+
+Experience.create!(name: "Un abonnement pour une box de vin",
+  luma_price: '50',
+  public_price: '71,67',
+  validity_date: '31/12/19',
+  description: "Que vous cherchiez la parfaite crème qui apaisera votre peau sensible, le spray cheveux qui saura dompter votre crinière ou le rouge à lèvres de vos rêves, on s’occupe de tout ! Tous nos produits sont sélectionnés avec soin.",
+  partner_logo: 'images/petitballon_logo.jpg',
+  category_id: '9',
+  partner_name: 'Le Petit Ballon',
+  photo_experience: 'images/petitballon_xp.jpg',
+)
+
+Experience.create!(name: "Le meilleur du café livré chez vous",
+  luma_price: '4,90',
+  public_price: '9,90',
+  validity_date: '31/12/19',
+  description: "Que vous cherchiez la parfaite crème qui apaisera votre peau sensible, le spray cheveux qui saura dompter votre crinière ou le rouge à lèvres de vos rêves, on s’occupe de tout ! Tous nos produits sont sélectionnés avec soin.",
+  partner_logo: 'images/kawa.png',
+  category_id: '9',
+  partner_name: 'Kawa',
+  photo_experience: 'images/kawa_xp.jpg',
+)
 
 # #Sport
-# Gympass
-# Trainme
+Experience.create!(name: "Un mois d'abonnement dans vos salles favorites de sport",
+  luma_price: '14,99',
+  public_price: '19,99',
+  validity_date: '31/12/19',
+  description: "Un mois de training",
+  partner_logo: 'images/gympass_logo.png',
+  category_id: '10',
+  partner_name: 'Gympass',
+  photo_experience: 'images/gympass_xp.jpg',
+)
+
+Experience.create!(name: "Une session pour le sport de votre choix avec un coach",
+  luma_price: '20',
+  public_price: '40',
+  validity_date: '31/12/19',
+  description: "Bénéficiez d'une séance de sport d'1h avec un coach personnel!",
+  partner_logo: 'images/trainme_logo.png',
+  category_id: '10',
+  partner_name: 'Trainme',
+  photo_experience: 'images/trainme_xp.jpg',
+)
