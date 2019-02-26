@@ -3,6 +3,18 @@
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logo_luma.svg", height: 50 %>
   <% end %>
+
+  <!-- Search Bar -->
+  <% if user_signed_in? %>
+  <%= form_tag experiences_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "cinéma, voyages, restaurants etc."
+    %>
+    <% end %>
+  <% end %>
+
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
