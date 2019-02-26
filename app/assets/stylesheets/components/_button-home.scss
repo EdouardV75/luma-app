@@ -1,0 +1,153 @@
+
+@mixin fontawesome {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@mixin centre($axis: "both") {
+	position: absolute;
+	@if $axis == "y" {
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+	@if $axis == "x" {
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	@if $axis == "both" {
+		top: 90%;
+		left: 50%;
+		-webkit-transform: translate(-51%, -50%);
+		-moz-transform: translate(-51%, -50%);
+		-ms-transform: translate(-51%, -50%);
+		-o-transform: translate(-51%, -50%);
+		transform: translate(-51%, -50%);
+	}
+}
+@mixin font-size($sizeValue: 1.6, $lineHeight: 2.4) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+  line-height: ($lineHeight * 10) + px;
+}
+@mixin fontawesome {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// body{
+// 	margin:0;
+// 	padding:0;
+// 	font-family: Karla;
+// 	width:100vw;
+// 	height:100vh;
+// 	background: radial-gradient(ellipse at center, #222 39%,#111 100%);
+// }
+
+// h1, h2, h3, h4{
+// 	font-family:$f-title;
+// 	font-weight:900;
+// }
+
+// p{
+// 	@include font-size(1.8, 2.6);
+// }
+
+.e-button{
+	@include centre();
+	width:100%;
+	text-align:center;
+	
+	.btn-home{
+		@include font-size(2, 2.8);
+		transition:all .2s ease-in-out;
+		
+		height:78px;
+		border:none;
+		background: transparent;
+		font-weight:600;
+		position:relative;
+		outline:none;
+		width:260px;
+		
+		span {
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%, -50%);
+			width:100%;
+			transition:all .3s ease-in-out;
+		}
+		
+		&:before{
+			border-radius:50px;
+			content:" ";
+			display:block;
+			width:100%;
+			height:100%;
+			position:absolute;
+			top:50%;
+			transform:translateY(-50%);
+			right:0;
+			z-index:-1;
+			transition:all .5s ease-in-out, border .3s ease-in-out;
+			border:2px solid #fff;
+			box-sizing:border-box;
+		}
+		
+		&:after{
+			@include fontawesome;
+			content:'\f00c';
+			position:absolute;
+			top:50%;
+			transform:translateY(-50%) scale(0);
+			transform-origin:center;
+			right:-28px;
+			z-index:0;
+			color: $dark-blue;
+			transition:all .2s ease-in-out;
+		}
+		
+		&:hover{
+			cursor:pointer;
+			transform:scale(1.05) translateY(-5px) translateZ(0);
+			
+			&:before{
+				background: $dark-blue;
+				border-color:transparent;
+				box-shadow:0 5px 10px rgba(0,0,0,0.2), 0 15px 20px rgba(0,0,0,0.1);
+			}
+		}
+		
+		&:active{
+			transform:scale(1) translateY(0) translateZ(0);
+			
+			&:before{
+				box-shadow:none;
+			}
+		}
+		&.clicked{
+			//Comment out if you want the button to popup again
+			transform:scale(1) translateY(0) translateZ(0);
+			
+			&:before{
+				box-shadow:none;
+			}
+		}	
+			
+	}
+}
