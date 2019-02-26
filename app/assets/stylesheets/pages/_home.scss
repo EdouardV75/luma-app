@@ -1,4 +1,5 @@
 // Specific CSS for your home-page
+
 header {
   position: relative;
   background-color: black;
@@ -80,21 +81,78 @@ h4 {
 //   border: none;
 // }
 
-.wrapper-1 {
-  background-color: $light-pink;
-  min-height: 500px;
-  margin: 20px;
-  padding:20px; 
-}
+
 
 .container {
   height: calc(100vh - 70px - 70px);
 }
 
 
-// .footer {
-//   height: 70px;
-//   background-color: $light-blue;
-// }
+.footer {
+  height: 70px;
+  background-color: $light-blue;
+}
+
+.pimg1, .pimg2, .pimg3 {
+  position: relative;
+  opacity: 0.9;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* parallax effect */
+  background-attachment:fixed;
+}
+
+.pimg1 {
+  
+    min-height: 400px;
+}
+
+.pimg2 {
+  background-image: url('https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+    min-height: 400px;
+}
+
+.pimg3 {
+  background-image: url('https://images.pexels.com/photos/632722/pexels-photo-632722.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+    min-height: 400px;
+}
+
+.section{
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-light {
+  background-color : white;
+}
+
+.section-light h2 {
+  color: $dark-gray;
+}
+
+.section-light p {
+  color: $dark-gray;
+}
+
+.section-dark {
+  background-color : $dark-gray;
+  color: #ddd;
+}
+
+.ptext{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size:35px;
+  letter-spacing:8px; 
+}
+
+.ptext .border {
+  background-color : none;
+  padding: 20px;
+}
 
 
