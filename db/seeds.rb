@@ -33,9 +33,21 @@ A vous de trouver les indices cachés dans la salle et de résoudre ensemble les
   photo_experience: 'images/HintHunt_xp',
 )
 
+Experience.create!(name: 'Incarna',
+  luma_price: '19,90',
+  public_price: '29,90',
+  validity_date: '31/12/19',
+  description: "Incarna est une expérience à part qui vous plongera en plein coeur d'un univers onirique dont vous et vos amis êtes les héros !
+Prenez rendez-vous dans l'un de nos centres, venez nous rejoindre sur place et laissez-nous vous équiper de notre matériel de réalité virtuelle. Vous serez alors projetés dans une dimension étrange et mystérieuse préparée tout spécialement pour évaluer vos compétences et déterminer si vous avez ce qu'il faut pour devenir un explorateur !
+Ce baptême du feu ne sera pas de tout repos, mais il ne sera que la première étape d'une aventure épique riche en rebondissements. Chaque nouvel épisode d'Incarna vous entraînera plus profondément dans son univers, à la découverte de ses étranges habitants, de son étonnante histoire et de ses troublants mystères...",
+  partner_logo: 'images/incarna_logo',
+  category_id: '2',
+  partner_name: 'Incarana',
+  photo_experience: 'images/incarna_xp',
+)
+
 # Jeux
 # HintHunt
-# 70 euros au lieu de 96 euros
 # Arcana
 
 # #Cinéma
