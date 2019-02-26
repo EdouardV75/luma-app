@@ -7,4 +7,12 @@ class User < ApplicationRecord
   has_many :orders
   has_many :experiences, through: :orders
   belongs_to :company
+
+  after_create :send_welcome_email
+
+  private
+
+  def send_welcome_email
+    UserMailer.welcome(self).deliver_now
+  end
 end

@@ -63,6 +63,9 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    devise_invitable (2.0.0)
+      actionmailer (>= 5.0)
+      devise (>= 4.6)
     dotenv (2.7.1)
     dotenv-rails (2.7.1)
       dotenv (= 2.7.1)
@@ -201,6 +204,7 @@ DEPENDENCIES
   bootsnap
   bootstrap-sass (~> 3.3)
   devise
+  devise_invitable (~> 2.0.0)
   dotenv-rails
   font-awesome-sass (~> 5.5.0)
   jbuilder (~> 2.0)
