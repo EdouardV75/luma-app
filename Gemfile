@@ -11,11 +11,13 @@ gem 'redis'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
+gem 'cloudinary', '~> 1.9.1'
 gem 'font-awesome-sass', '~> 5.5.0'
 gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem "pundit"
 
 gem 'devise_invitable', '~> 2.0.0'
 
