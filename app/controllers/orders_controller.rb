@@ -24,6 +24,12 @@ class OrdersController < ApplicationController
     end
   end
 
+  def dashboard
+    @user = current_user
+    authorize @user
+    @orders = current_user.company.orders
+  end
+
    # def edit
   #   @order = Order.find(params[:order_id])
   #   authorize @order
