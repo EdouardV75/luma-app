@@ -83,15 +83,6 @@ h4 {
 
 
 
-.container {
-  height: calc(100vh - 70px - 70px);
-}
-
-
-.footer {
-  height: 70px;
-  background-color: $light-blue;
-}
 
 .pimg1, .pimg2, .pimg3 {
   position: relative;
@@ -109,12 +100,12 @@ h4 {
 }
 
 .pimg2 {
-  background-image: url('https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+  
     min-height: 400px;
 }
 
 .pimg3 {
-  background-image: url('https://images.pexels.com/photos/632722/pexels-photo-632722.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+  ;
     min-height: 400px;
 }
 
@@ -155,5 +146,6 @@ h4 {
   background-color : none;
   padding: 20px;
 }
+
 
 
