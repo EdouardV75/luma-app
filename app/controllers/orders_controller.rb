@@ -24,6 +24,14 @@ class OrdersController < ApplicationController
     end
   end
 
+  def dashboard
+    @user = current_user
+    authorize @user
+    @orders = current_user.company.orders
+    @user_to_create = User.new
+    @order = Order.new
+  end
+
    # def edit
   #   @order = Order.find(params[:order_id])
   #   authorize @order
@@ -41,4 +49,5 @@ class OrdersController < ApplicationController
   def order_params
     params.require(:order).permit(:status, :order_id, :experience_id)
   end
+
 end

@@ -1,5 +1,7 @@
 class Order < ApplicationRecord
   belongs_to :user
   belongs_to :experience
-  validates :status, inclusion: { in: ["Pending", "Payed", "Rejected"] }
+  # has_one :company, through: :user
+  validates :status, inclusion: { in: ["pending", "payed", "rejected"] }
+
 end
