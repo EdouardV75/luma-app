@@ -1,9 +1,8 @@
-<div class="navbar-category">
-  <div class="category-container">
-    <ul class="tabs flex">
-      <% Category.all.each do |category| %>
-        <li class="tab category"><%= category.name %></li>
-      <% end %>
-    </ul>
-  </div>
+<div class="category-container">
+  <ul class="tabs-category flex">
+    <% Category.all.each do |category| %>
+      <li class="tab-category"><%= category.name %></li>
+    <% end %>
+  </ul>
 </div>
+
