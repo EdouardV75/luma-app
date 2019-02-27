@@ -6,5 +6,5 @@ class User < ApplicationRecord
   has_many :preferences
   has_many :orders
   has_many :experiences, through: :orders
-  # belongs_to :company
+  belongs_to :company
 end
