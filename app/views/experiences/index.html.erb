@@ -1,1 +1,53 @@
-<h1>Index</h1>
+<%= render 'shared/navbar-categories' %>
+<div class="container-index">
+  <div class="container-cards">
+
+
+      <div class="row">
+        <% @experiences.each do |experience| %>
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+
+          <div class="experience-card" >
+            <%= image_tag experience.photo_experience, class: "card-image" %>
+            <div class="price-container fix-top-right block">
+              <h3 class="price "><%= experience.luma_price.to_i %>€</h3>
+              <h4 class="price"><%= experience.public_price.to_i %>€</h3>
+
+            </div>
+            <div class="card-player">
+              <div id="player"></div>
+            </div>
+            <div class="card-info">
+              <div class="title-container">
+                <h2 class="title fix-bottom"><%= "#{experience.name}" %></h2>
+              </div>
+              <p class="genre"><%= experience.category.name %></p>
+              <div class="desc">
+                <div class="rating">
+                  <div class="experience-infos flex">
+                    <i class="far fa-calendar-alt"></i>
+                    <p>Offre disponible jusqu'au</p>
+                    <p><%= experience.validity_date %></p>
+                  </div>
+                  <div class="stars">
+                    <i class="fas fa-star stars"></i>
+                    <i class="fas fa-star stars"></i>
+                    <i class="fas fa-star stars"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt stars"></i>
+                  </div>
+                </div>
+                <p class="
+                text-autocrop"> <%= experience.description %> </p>
+              </div>
+              <a class="button-cards" href="/experiences/<%= experience.id %>">Book Now</a>
+            </div>
+          </div>
+
+        </div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>

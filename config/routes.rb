@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   # resources :orders, only: [:index]
   resources :users, only: [:new]
 
+  get 'preferences', to: 'pages#preferences'
   get 'dashboard', to: 'orders#dashboard'
 end
