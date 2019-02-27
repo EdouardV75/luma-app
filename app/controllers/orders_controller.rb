@@ -28,6 +28,8 @@ class OrdersController < ApplicationController
     @user = current_user
     authorize @user
     @orders = current_user.company.orders
+    @user_to_create = User.new
+    @order = Order.new
   end
 
    # def edit
@@ -47,4 +49,5 @@ class OrdersController < ApplicationController
   def order_params
     params.require(:order).permit(:status, :order_id, :experience_id)
   end
+
 end

@@ -1,7 +1,6 @@
 class OrderPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      raise
       scope.all
     end
   end
