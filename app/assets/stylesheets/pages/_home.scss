@@ -83,16 +83,6 @@ h4 {
 
 
 
-.container {
-  height: calc(100vh - 70px - 70px);
-}
-
-
-.footer {
-  height: 70px;
-  background-color: $light-blue;
-}
-
 .pimg1, .pimg2, .pimg3 {
   position: relative;
   opacity: 0.9;
@@ -104,7 +94,7 @@ h4 {
 }
 
 .pimg1 {
-  
+
     min-height: 400px;
 }
 
@@ -147,8 +137,8 @@ h4 {
   text-align: center;
   color: white;
   font-size:35px;
-  letter-spacing:8px; 
-  
+  letter-spacing:8px;
+
 }
 
 .ptext .border {
