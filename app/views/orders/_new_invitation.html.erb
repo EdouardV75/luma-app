@@ -1,0 +1,22 @@
+<%= simple_form_for(user, url: user_invitation_path, html: { method: :post }) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" }%>
+  <%= f.input :first_name,
+                required: true,
+                autofocus: true %>
+  <%= f.input :first_name,
+                required: true,
+                autofocus: true %>
+ <%= f.input :company_id,
+                required: true,
+                autofocus: true,
+                as: :hidden,
+                input_html: { value: current_user.company.id } %>
+
+  <div class="form-actions">
+    <%= f.button :submit, t("devise.invitations.new.submit_button") %>
+  </div>
+<% end %>
