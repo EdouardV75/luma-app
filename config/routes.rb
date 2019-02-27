@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   end
   # resources :orders, only: [:index]
 
+  get 'dashboard', to: 'experiences#preferences'
   get 'dashboard', to: 'orders#dashboard'
 end
