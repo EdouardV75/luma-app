@@ -5,7 +5,7 @@ class PostPolicy < ApplicationPolicy
     end
   end
 
-  def new?
-    user ? true : false
-    end
+  def create?
+    user.present?
+  end
 end

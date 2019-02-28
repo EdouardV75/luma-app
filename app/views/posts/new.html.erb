@@ -1,20 +1,16 @@
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <div class="form-post">
-        <h1>Write a post</h1>
+        <h1>Personnalisez vos avantages préférées 🤩</h1>
         <%= simple_form_for(@post) do |f| %>
         <div class="row">
-          <div class="col-xs-6">
-            <%= f.input :name, placeholder: "How to design a form" %>
-          </div>
-          <div class="col-xs-6">
-            <%= f.input :status, collection: Post::STATUSES, prompt: "Which status" %>
-          </div>
         </div>
+        <div>
           <%= f.association :categories, as: :check_boxes %>
-          <%= f.input :content, placeholder: "In this tutorial..." %>
-          <%= f.submit "Save", class: "btn btn-primary"  %>
+        </div>
+          <%= f.submit "Sauvegarder", class: "btn btn-primary"  %>
         <% end %>
       </div>
     </div>
