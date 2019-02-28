@@ -90,8 +90,16 @@
 .links-homepage {
   margin-top: 15px;
   display: flex;
-  flex-direction: row;
+  flex-direction: row;  position: absolute;
   position: absolute;
   left: 183px;
   bottom: 17px;
+}
+
+.navbar-wagon-white {
+  position: sticky !important;
+}
+
+#homepage {
+  position: fixed;
 }

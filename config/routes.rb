@@ -11,4 +11,9 @@ Rails.application.routes.draw do
   resources :users, only: [:new]
 
   get 'dashboard', to: 'orders#dashboard'
+
+  require "sidekiq/web"
+  authenticate :user, lambda { |u| u } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
 end
