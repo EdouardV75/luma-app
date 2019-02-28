@@ -1,0 +1,23 @@
+class PostsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:new, :create]
+
+ def new
+    @post = Post.new
+    authorize @post
+  end
+
+  def create
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to post_path(@post)
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:name, :status, :category_ids, :content)
+  end
+end
