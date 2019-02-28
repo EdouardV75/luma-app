@@ -8,8 +8,10 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user = current_user
+    authorize @post
     if @post.save
-      redirect_to post_path(@post)
+      redirect_to experiences_path
     else
       render :new
     end
@@ -18,6 +20,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:name, :status, :category_ids, :content)
+    params.require(:post).permit(:name, :status, :content, category_ids: [])
   end
 end

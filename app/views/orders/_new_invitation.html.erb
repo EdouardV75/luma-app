@@ -23,5 +23,6 @@
 
   <div class="form-actions">
     <%= f.button :submit, t("devise.invitations.new.submit_button"), class: "btn btn-primary", value: "Envoyer une invitation"%>
+    <% redirect_to new_post_path %>
   </div>
 <% end %>
