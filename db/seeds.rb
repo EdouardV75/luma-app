@@ -10,7 +10,6 @@ Company.destroy_all
 Experience.destroy_all
 Category.destroy_all
 
-
 puts 'Creating companies...'
 
 company1 = Company.create!(name: "Tesla", logo:'tesla_logo.png')
