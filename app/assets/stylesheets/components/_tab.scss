@@ -1,0 +1,33 @@
+
+.tabs {
+  justify-content: center;
+   display: flex;
+  list-style: none;
+}
+
+.tabs ul {
+  margin-bottom: 0px;
+  height: 0px;
+}
+
+.tabs li {
+  color: rgb(20,20,20);
+  font-size: 16px;
+  padding: 20px 40px;
+  cursor: pointer;
+  background-color: $light-gray;
+  margin-bottom: 0px;
+  border-radius: 10px 10px;
+  margin: 0px 5px;
+}
+
+.tabs li.active {
+  color: white;
+  padding: 20px 40px;
+  cursor: pointer;
+  background-color: $dark-blue;
+}
+
+.dashboard-wrapper {
+  margin-bottom: 50px;
+}

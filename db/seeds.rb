@@ -26,16 +26,11 @@ user3 = User.create!(email: "claire.edith.demont@gmail.com", password: "azerty",
 user4 = User.create!(email: "edouard.vaudour@icloud.com", password: "azerty", first_name: "Edouard", last_name: "Vaudour", company_id: company1.id)
 
 puts 'Creating categories...'
-Cinéma = Category.create!(name: 'Cinéma')
-Jeux = Category.create!(name: 'Jeux')
-Voyages = Category.create!(name: 'Voyages')
-Nature = Category.create!(name: 'Nature')
-Beauté = Category.create!(name: 'Beauté')
-Déco = Category.create!(name: 'Déco')
-Presse = Category.create!(name: 'Presse')
-Culture = Category.create!(name: 'Culture')
-Gastronomie = Category.create!(name: 'Gastronomie')
-Sport = Category.create!(name: 'Sport')
+
+categories = %w(Cinéma Jeux Voyages Nature Beauté Déco Presse Culture Gastronomie Sport)
+categories.each do |category|
+  Category.create!(name: category)
+end
 
 puts 'Creating experiences...'
 

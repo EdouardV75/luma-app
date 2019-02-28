@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_27_094448) do
+ActiveRecord::Schema.define(version: 2019_02_28_112038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,13 +44,32 @@ ActiveRecord::Schema.define(version: 2019_02_27_094448) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string "status", default: "pending"
+    t.string "status", default: "Pending"
     t.bigint "user_id"
     t.bigint "experience_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["experience_id"], name: "index_orders_on_experience_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "post_categories", force: :cascade do |t|
+    t.bigint "post_id"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_post_categories_on_category_id"
+    t.index ["post_id"], name: "index_post_categories_on_post_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "name"
+    t.string "status"
+    t.text "content"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "preferences", force: :cascade do |t|
@@ -96,6 +115,9 @@ ActiveRecord::Schema.define(version: 2019_02_27_094448) do
   add_foreign_key "experiences", "categories"
   add_foreign_key "orders", "experiences"
   add_foreign_key "orders", "users"
+  add_foreign_key "post_categories", "categories"
+  add_foreign_key "post_categories", "posts"
+  add_foreign_key "posts", "users"
   add_foreign_key "preferences", "categories"
   add_foreign_key "preferences", "users"
   add_foreign_key "users", "companies"
