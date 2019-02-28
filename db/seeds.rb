@@ -5,21 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Company.destroy_all
 Experience.destroy_all
+Category.destroy_all
+
 
 puts 'Creating companies...'
 
-Company.create!(name: "Tesla", logo:'tesla_logo.png')
+company1 = Company.create!(name: "Tesla", logo:'tesla_logo.png')
 Company.create!(name: "SpaceX", logo:'spacex_logo.png')
 Company.create!(name: "Doctolib", logo:'doctolib_logo.png')
 Company.create!(name: "Luma", logo:'logo_luma_white.png')
 
 puts 'Creating users...'
 
-user1 = User.create!(email: "alex@yahoo.fr", password: "azerty", first_name: "Alex", last_name: "Cousin", company: "Tesla")
-user2 = User.create!(email: "adamdylan.p@gmail.com", password: "azerty", first_name: "Dylan", last_name: "Adam", company: "Space x")
-user3 = User.create!(email: "claire.edith.demont@gmail.com", password: "azerty", first_name: "Claire", last_name: "Demont", company: "Doctolib")
-user4 = User.create!(email: "edouard.vaudour@icloud.com", password: "azerty", first_name: "Edouard", last_name: "Vaudour", company: "Luma")
+user1 = User.create!(email: "alex@yahoo.fr", password: "azerty", first_name: "Alex", last_name: "Cousin", company_id: company1.id)
+user2 = User.create!(email: "adamdylan.p@gmail.com", password: "azerty", first_name: "Dylan", last_name: "Adam", company_id: company1.id)
+user3 = User.create!(email: "claire.edith.demont@gmail.com", password: "azerty", first_name: "Claire", last_name: "Demont", company_id: company1.id)
+user4 = User.create!(email: "edouard.vaudour@icloud.com", password: "azerty", first_name: "Edouard", last_name: "Vaudour", company_id: company1.id)
 
 puts 'Creating categories...'
 Cinéma = Category.create!(name: 'Cinéma')
@@ -44,7 +48,7 @@ Experience.create!(name: "Une année avec les meilleurs films",
   partner_logo: 'images/mubi_logo.png',
   category_id: '1',
   partner_name: 'Mubi',
-  photo_experience: 'images/mubi_xp.png',
+  photo_experience: 'mubi_xp.png',
 )
 
 Experience.create!(name: "Un pass de 10 places de Cinéma",
@@ -55,7 +59,7 @@ Experience.create!(name: "Un pass de 10 places de Cinéma",
   partner_logo: 'images/ugc_logo.png',
   category_id: '1',
   partner_name: 'UGC',
-  photo_experience: 'images/ugc_xp.jpg',
+  photo_experience: 'ugc_xp.jpg',
 )
 
 # Jeux
@@ -69,7 +73,7 @@ A vous de trouver les indices cachés dans la salle et de résoudre ensemble les
   partner_logo: 'images/hinthunt_logo.png',
   category_id: '2',
   partner_name: 'HintHunt',
-  photo_experience: 'images/hinthunt_xp.jpg',
+  photo_experience: 'HintHunt_xp.jpg',
 )
 
 Experience.create!(name: 'Une expérience unique de Réalité Virtuelle',
@@ -82,7 +86,7 @@ Ce baptême du feu ne sera pas de tout repos, mais il ne sera que la première �
   partner_logo: 'images/incarna_logo.jpg',
   category_id: '2',
   partner_name: 'Incarana',
-  photo_experience: 'images/incarna_xp.jpg',
+  photo_experience: 'incarna_xp.jpg',
 )
 
 #Voyages
@@ -94,7 +98,7 @@ Experience.create!(name: "Un séjour inoubliable",
   partner_logo: 'images/evaneos_logo.png',
   category_id: '3',
   partner_name: 'Evaneos',
-  photo_experience: 'images/evaneos_xp.jpg',
+  photo_experience: 'evaneos_xp.jpg',
 )
 
 Experience.create!(name: "Un week-end en amoureux",
@@ -105,7 +109,7 @@ Experience.create!(name: "Un week-end en amoureux",
   partner_logo: 'images/weekendr_logo.jpeg',
   category_id: '3',
   partner_name: 'Weekendr',
-  photo_experience: 'images/weekendr_xp.jpg',
+  photo_experience: 'weekendr_xp.jpg',
 )
 
 #Nature
@@ -117,7 +121,7 @@ Experience.create!(name: "Adopte un corail",
   partner_logo: 'images/coralguardian_logo.png',
   category_id: '4',
   partner_name: 'Coral Guardian',
-  photo_experience: 'images/coralguardian_xp.jpg',
+  photo_experience: 'coralguardian_xp.jpg',
 )
 
 Experience.create!(name: "Offre un arbre",
@@ -128,7 +132,7 @@ Experience.create!(name: "Offre un arbre",
   partner_logo: 'images/ecotree_logo.svg',
   category_id: '4',
   partner_name: 'Ecotree',
-  photo_experience: 'images/ecotree_xp.jpg',
+  photo_experience: 'ecotree_xp.jpg',
 )
 
 #Beauté
@@ -140,7 +144,7 @@ Experience.create!(name: "Votre box beauté",
   partner_logo: 'images/birchbox_logo.png',
   category_id: '5',
   partner_name: 'Birchbox',
-  photo_experience: 'images/birchbox_xp.jpg',
+  photo_experience: 'birchbox_xp.jpg',
 )
 
 Experience.create!(name: "Votre box de soin pour homme",
@@ -151,7 +155,7 @@ Experience.create!(name: "Votre box de soin pour homme",
   partner_logo: 'images/horace_logo.jpg',
   category_id: '5',
   partner_name: 'Horace',
-  photo_experience: 'images/horace_xp.jpg',
+  photo_experience: 'horace_xp.jpg',
 )
 
 #Déco
@@ -163,7 +167,7 @@ Experience.create!(name: "Votre abonnement mensuel de fleurs",
   partner_logo: 'images/bergamotte_logo.jpg',
   category_id: '6',
   partner_name: 'Bergamotte',
-  photo_experience: 'images/bergamotte_xp.jpg',
+  photo_experience: 'bergamotte_xp.jpg',
 )
 
 Experience.create!(name: "Votre oeuvre d'art préférée",
@@ -174,7 +178,7 @@ Experience.create!(name: "Votre oeuvre d'art préférée",
   partner_logo: 'images/artsper_logo.jpg',
   category_id: '6',
   partner_name: 'Artsper',
-  photo_experience: 'images/artsper_xp.jpg',
+  photo_experience: 'artsper_xp.jpg',
 )
 
 Experience.create!(name: "Une photographie en édition limitée",
@@ -185,7 +189,7 @@ Experience.create!(name: "Une photographie en édition limitée",
   partner_logo: 'images/yellowkorner_logo.jpg',
   category_id: '6',
   partner_name: 'Yellowkorner',
-  photo_experience: 'images/yellowkorner_xp.jpg',
+  photo_experience: 'yellowkorner_xp.jpg',
 )
 
 #Presse
@@ -197,7 +201,7 @@ Experience.create!(name: "Un abonnement annuel pour Usbek & Rica",
   partner_logo: 'images/usbekrica_logo.png',
   category_id: '7',
   partner_name: 'Usbek & Rica',
-  photo_experience: 'images/usbekrica_xp.jpg',
+  photo_experience: 'usbekrica_xp.jpg',
 )
 
 #Culture
@@ -209,7 +213,7 @@ Experience.create!(name: "Le meilleur de la culture",
   partner_logo: 'images/culturesecrets_logo.png',
   category_id: '8',
   partner_name: 'CultureSecrets',
-  photo_experience: 'images/culturesecrets_xp.jpg',
+  photo_experience: 'culturesecrets_xp.jpg',
 )
 
 Experience.create!(name: "Une box 6 spectacles",
@@ -220,7 +224,7 @@ Experience.create!(name: "Une box 6 spectacles",
   partner_logo: 'images/otheatro_logo.png',
   category_id: '8',
   partner_name: 'Otheatro',
-  photo_experience: 'images/otheatro_xp.jpg',
+  photo_experience: 'otheatro_xp.jpg',
 )
 
 # #Gastronomie
@@ -232,7 +236,7 @@ Experience.create!(name: "Mon panier de fruits et légumes",
   partner_logo: 'images/laruche_logo.png',
   category_id: '9',
   partner_name: 'La ruche qui dit oui',
-  photo_experience: 'images/laruche_xp.jpg',
+  photo_experience: 'laruche_logo.png',
 )
 
 Experience.create!(name: "Une formation de 2h sur le café",
@@ -243,7 +247,7 @@ Experience.create!(name: "Une formation de 2h sur le café",
   partner_logo: 'images/lomi_logo.jpg',
   category_id: '9',
   partner_name: 'Café Lomi',
-  photo_experience: 'images/lomi_xp.jpg',
+  photo_experience: 'lomi_xp.jpg',
 )
 
 Experience.create!(name: "Un abonnement pour une box de vin",
@@ -254,7 +258,7 @@ Experience.create!(name: "Un abonnement pour une box de vin",
   partner_logo: 'images/petitballon_logo.jpg',
   category_id: '9',
   partner_name: 'Le Petit Ballon',
-  photo_experience: 'images/petitballon_xp.jpg',
+  photo_experience: 'petitballon_xp.jpg',
 )
 
 Experience.create!(name: "Le meilleur du café livré chez vous",
@@ -265,7 +269,7 @@ Experience.create!(name: "Le meilleur du café livré chez vous",
   partner_logo: 'images/kawa.png',
   category_id: '9',
   partner_name: 'Kawa',
-  photo_experience: 'images/kawa_xp.jpg',
+  photo_experience: 'kawa_xp.jpg',
 )
 
 # #Sport
@@ -277,7 +281,7 @@ Experience.create!(name: "Un mois d'abonnement dans vos salles favorites de spor
   partner_logo: 'images/gympass_logo.png',
   category_id: '10',
   partner_name: 'Gympass',
-  photo_experience: 'images/gympass_xp.jpg',
+  photo_experience: 'gympass_xp.jpg',
 )
 
 Experience.create!(name: "Une session pour le sport de votre choix avec un coach",
@@ -288,5 +292,7 @@ Experience.create!(name: "Une session pour le sport de votre choix avec un coach
   partner_logo: 'images/trainme_logo.png',
   category_id: '10',
   partner_name: 'Trainme',
-  photo_experience: 'images/trainme_xp.jpg',
+  photo_experience: 'trainme_xp.jpg',
 )
+
+puts 'Done!'
