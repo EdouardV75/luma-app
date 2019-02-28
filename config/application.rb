@@ -6,6 +6,9 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+config.action_mailer.delivery_method = :postmark
+config.action_mailer.postmark_settings = { :api_token => "84d89921-3a81-4505-8db0-3127d829c198" }
+
 module LumaApp
   class Application < Rails::Application
     config.generators do |generate|
