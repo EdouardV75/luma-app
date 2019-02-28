@@ -3,9 +3,9 @@ import { loadDynamicBannerText } from '../components/banner.js';
 import { homeWrapper } from '../components/homeWrapper.js';
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { category_choice } from '../components/category_choice.js';
+import { selectTab } from '../components/tab.js'
 
 initUpdateNavbarOnScroll();
 loadDynamicBannerText();
 homeWrapper();
-
-
+selectTab();

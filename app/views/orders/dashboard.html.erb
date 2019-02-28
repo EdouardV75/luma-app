@@ -1,5 +1,29 @@
 <h1>This is the dashboard</h1>
 
-<button type="button" id="button-office-manager" class="btn btn-primary">Beautiful button</button>
+<div class="dashboard-menu-wrapper wrapper">
+  <div class="dashboard-header container">
+    <ul class="tabs flex">
+      <li class="tab-head tab-un-dashboard-head active">Dashboard</li>
+      <li class="tab-head tab-deux-collaborateurs-head">Mes collaborateurs</li>
+    </ul>
+  </div>
+</div>
 
-<%= render 'new_invitation', user: @user_to_create %>
+
+<div class="dashboard-wrapper wrapper">
+  <div class="dashboard-tabs container">
+
+    <div class="row">
+      <div class="tab-un-dashboard">
+        <p>Tab 1</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="tab-deux-collaborateurs hidden">
+        <%= render 'new_invitation', user: @user_to_create %>
+      </div>
+    </div>
+
+  </div>
+</div>
