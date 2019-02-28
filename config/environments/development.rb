@@ -38,8 +38,12 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.delivery_method = :letter_opener
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  # config.action_mailer.delivery_method = :letter_opener
+  # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.action_mailer.delivery_method     = :postmark
+  config.action_mailer.postmark_settings   = { api_key: ENV['84d89921-3a81-4505-8db0-3127d829c198'] }
+  config.action_mailer.default_url_options = { host: "luma-app.com" }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
