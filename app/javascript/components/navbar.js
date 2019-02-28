@@ -1,4 +1,6 @@
 const initUpdateNavbarOnScroll = () => {
+  const input = document.getElementById('homepage');
+  if (input) {
   const navbar = document.querySelector('.navbar-wagon');
   const whiteLogo = document.getElementById('white_logo');
   const blueLogo = document.getElementById('blue_logo')
@@ -17,6 +19,7 @@ const initUpdateNavbarOnScroll = () => {
       }
     });
   }
+ }
 };
 
 export { initUpdateNavbarOnScroll };
