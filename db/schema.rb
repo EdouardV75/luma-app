@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2019_02_28_112038) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string "status", default: "pending"
+    t.string "status", default: "Pending"
     t.bigint "user_id"
     t.bigint "experience_id"
     t.datetime "created_at", null: false
