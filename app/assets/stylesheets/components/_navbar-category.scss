@@ -3,16 +3,18 @@
   background-color: white;
   margin-top: 70px;
   text-align: center;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1),0 1px 0 0 rgba(0,0,0,0.03);
 }
 
 
 .category-container {
   transition: all 0.3s ease;
-  height: 70px;
+  height: 60px;
   color: $dark-gray;
-  width: 85%;
+  width: 87%;
   margin-left: auto;
   margin-right: auto;
+  padding-right: 5px;
 }
 
 .category-container {
@@ -23,8 +25,37 @@
 
 .tabs-category {
   list-style: none;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-left: 0px;
-  align-items: center;
+  padding-top: 15px;
+  flex-wrap: wrap;
+  font-family: $headers-font;
+  cursor: pointer;
 }
 
+.tab-category {
+  margin-right: 15px;
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.accent-topline {
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: -1px;
+    height: 1px;
+    background: red;
+    opacity: 0;
+    transition: all ease-out .3s;
+  }
+  &.selected:before, &:hover:before {
+    opacity: 1;
+    left: 20px;
+    right: 20px;
+  }
+}
