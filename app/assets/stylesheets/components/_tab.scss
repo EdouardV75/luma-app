@@ -1,6 +1,3 @@
-.dashboard-menu-wrapper {
-  margin-top: 0px;
-}
 
 .tabs {
   justify-content: center;
@@ -29,4 +26,8 @@
   padding: 20px 40px;
   cursor: pointer;
   background-color: $dark-blue;
+}
+
+.dashboard-wrapper {
+  margin-bottom: 50px;
 }
