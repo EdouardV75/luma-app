@@ -3,13 +3,18 @@
   <%= f.input :email,
                 required: true,
                 autofocus: true,
+                placeholder: "bob@yourcomapny.com",
                 input_html: { autocomplete: "email" }%>
+  <%= f.label :first_name, 'Prénom' %>
   <%= f.input :first_name,
                 required: true,
-                autofocus: true %>
-  <%= f.input :first_name,
+                autofocus: true,
+                label: false %>
+  <%= f.label :last_name, 'Nom' %>
+  <%= f.input :last_name,
                 required: true,
-                autofocus: true %>
+                autofocus: true,
+                label: false %>
  <%= f.input :company_id,
                 required: true,
                 autofocus: true,
@@ -17,6 +22,6 @@
                 input_html: { value: current_user.company.id } %>
 
   <div class="form-actions">
-    <%= f.button :submit, t("devise.invitations.new.submit_button") %>
+    <%= f.button :submit, t("devise.invitations.new.submit_button"), class: "btn btn-primary", value: "Envoyer une invitation"%>
   </div>
 <% end %>
