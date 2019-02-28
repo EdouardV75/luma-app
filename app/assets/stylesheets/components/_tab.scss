@@ -3,37 +3,30 @@
 }
 
 .tabs {
-  height: 70px;
   justify-content: center;
-  display: flex;
-  border-radius: 10px 10px 0 0;
-  margin-top: 20px;
-  margin-bottom: 0px;
+   display: flex;
+  list-style: none;
 }
 
 .tabs ul {
   margin-bottom: 0px;
   height: 0px;
-
 }
 
 .tabs li {
-  color: $blue;
-  font-size: 26px;
+  color: rgb(20,20,20);
+  font-size: 16px;
   padding: 20px 40px;
   cursor: pointer;
   background-color: $light-gray;
   margin-bottom: 0px;
-  border-style: solid;
-  border-color: $gray;
-  border-width: 1px;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px;
+  margin: 0px 5px;
 }
 
 .tabs li.active {
-  color: $blue;
-  font-size: 26px;
+  color: white;
   padding: 20px 40px;
   cursor: pointer;
-  background-color: white;
+  background-color: $dark-blue;
 }

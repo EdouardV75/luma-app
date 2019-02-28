@@ -1,13 +1,10 @@
 <h1>This is the dashboard</h1>
 
-<%= render 'new_invitation', user: @user_to_create %>
-
-
 <div class="dashboard-menu-wrapper wrapper">
   <div class="dashboard-header container">
     <ul class="tabs flex">
-      <li class="tab tab-un-dashboard-head active">Dashboard</li>
-      <li class="tab tab-deux-collaborateurs-head">Mes collaborateurs</li>
+      <li class="tab-head tab-un-dashboard-head active">Dashboard</li>
+      <li class="tab-head tab-deux-collaborateurs-head">Mes collaborateurs</li>
     </ul>
   </div>
 </div>
@@ -24,7 +21,7 @@
 
     <div class="row">
       <div class="tab-deux-collaborateurs hidden">
-        <p>Tab 2</p>
+        <%= render 'new_invitation', user: @user_to_create %>
       </div>
     </div>
 
