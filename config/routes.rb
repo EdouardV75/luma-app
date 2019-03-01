@@ -12,8 +12,8 @@ Rails.application.routes.draw do
 
   get 'dashboard', to: 'orders#dashboard'
 
-  require "sidekiq/web"
-  authenticate :user, lambda { |u| u } do
-    mount Sidekiq::Web => '/sidekiq'
-  end
+  # require "sidekiq/web"
+  # authenticate :user, lambda { |u| u } do
+  #   mount Sidekiq::Web => '/sidekiq'
+  # end
 end
