@@ -1,10 +1,10 @@
-<p><%= "Salut #{@resource.first_name.capitalize} !"%></p>
+<p><%= "Hello #{@resource.first_name.capitalize} !"%></p>
 
 <% office_manager = User.where({company: @resource.company, office_manager: true}).first %>
-<p><%= "Votre Office Manager #{office_manager.first_name.capitalize} #{ffice_manager.last_name.capitalize} vous invite sur la plate-forme d'avantages Luma-app. Validez votre compte et venez découvrir les offres dont vous bénéficiez en suivant ce lien :"%></p>
+<p><%= "Votre Office Manager #{office_manager.first_name.capitalize} #{office_manager.last_name.capitalize} vous invite sur la plateforme d'avantages Luma. Validez votre compte et venez découvrir les offres dont vous bénéficiez en suivant ce lien :"%></p>
 
 <p><%= link_to t("Accepter l'invitation"), accept_user_invitation_url(@resource, :invitation_token => @token) %></p>
 
 <p><%=("Si vous ne souhaitez pas accepter l'invitation, merci d'ignorer ce mail. Votre compte ne sera pas créé jusqu'à ce que vous accédiez au lien ci-dessus et définissiez votre mot de passe.") %></p>
 
-<p><%=("Luma-app's Team !") %></p>
+<p><%=("Luma Team 🙌!") %></p>
