@@ -1,15 +1,29 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      <div class="form-post">
-        <h1>Personnalisez vos avantages préférés 😍</h1>
-        <%= simple_form_for(@post) do |f| %>
-        <div class="row">
-          <%= f.association :categories, as: :check_boxes %>
-          <%= f.submit "Sauvegarder", class: "btn btn-primary"  %>
-        <% end %>
+<div class="wrapper-form" style="background-image: linear-gradient(-225deg, rgba(0, 0, 0 , 1) 0%, rgba(0, 0, 0,0.2) 0%), url('http://www.catfinnie.co.uk/assets/img/portfolio/masonry/CatFinnie_WeekendSight.jpg');">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="form-post">
+          <h1>Choisissez vos catégories préférées</h1>
+          <%= simple_form_for(@post) do |f| %>
+          <div class="row">
+          </div>
+            <div class="form-group">
+              <input type="hidden" name="post[category_ids][]" value="">
+              <div class="category-choices">
+                <% Category.all.each do |category| %>
+                  <input type="checkbox" class="hidden" value="<%= category.id %>" name="post[category_ids][]" id="post_category_ids_<%= category.id %>">
+                  <label class="category-choice" for="post_category_ids_<%= category.id %>">
+                    <%= category.name %>
+                    <i class="fa fa-check"></i>
+                  </label>
+                <% end %>
+               </div>
+            </div>
+            <%= f.submit "Save", class: "btn btn-primary"  %>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
 </div>
+
