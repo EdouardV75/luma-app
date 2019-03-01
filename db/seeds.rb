@@ -17,7 +17,7 @@ company1 = Company.create!(name: "Tesla", logo:'tesla_logo.png')
 Company.create!(name: "SpaceX", logo:'spacex_logo.png')
 Company.create!(name: "Doctolib", logo:'doctolib_logo.png')
 Company.create!(name: "Luma", logo:'logo_luma_white.png')
-company5 = Company.create(name: "Blablacar", logo: 'blablacar_logo.png')
+company5 = Company.create(name: "Doctolib", logo: 'doctolib_logo.png')
 
 puts 'Creating users...'
 
