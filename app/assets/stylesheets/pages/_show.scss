@@ -1,6 +1,6 @@
 .wrapper-1 {
 	width: 100%;
-	margin: 70px auto 0; 
+	margin: 0 auto 0; 
 	padding:30px;
 	display: flex;
 	flex-direction: row;
@@ -15,13 +15,16 @@
 	flex-direction: column; 
 	justify-content: space-between;
 	align-items: flex-start;
-	margin-right: 30px;
+	margin-right: 50px;
 	position:relative;
+	left: -30px;
+    top: 30px;
 
 	.experience-info {
 		flex-basis: 66%;
 		padding: 30px 0;
 		margin-top: -30px;
+
 	}
 
 	.img-xp {
@@ -56,6 +59,9 @@
 	.partner {
 		display:flex; 
 		flex-direction: row;
+		position: relative;
+	    top: -30px;
+	    left: 30px;
 		h2 {
 			color: $dark-blue;
 			font-size: 16px;
@@ -64,7 +70,7 @@
 	}
 
 
-	.experience-info h1 {
+	.experience-info h2 {
 		font-size: 30px;
 		color: $dark-blue;
 		font-style: bold;
@@ -75,19 +81,20 @@
 		line-height: 21px;
 		color: $dark-gray;
 		text-align: justify;
+		 width: 750px;
 	}
 
 	.fa-share-square {
 		position: absolute;
-		top: 100px;
-		right: 91px;
+		top: 160px;
+        right: 100px;
 		color: $dark-gray;
 		opacity: 0.8;
 	}
 	.fa-heart {
 		position: absolute;
-		top: 100px;
-		right: 60px;
+		top: 160px;
+		right: 70px;
 		color: $dark-gray;
 		opacity: 0.8;
 
