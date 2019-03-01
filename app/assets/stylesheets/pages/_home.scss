@@ -221,10 +221,10 @@ $prefixes : ('webkit','moz','ms','o');
 }
 
 .heading{
-  color:#fff;
+  color: white;
   text-align:center;
   text-transform:capitalize;
-  font-weight:lighter;
+  font-weight:bold;
   padding:10px;
   font-size:1.2em;
 }
@@ -245,12 +245,13 @@ $prefixes : ('webkit','moz','ms','o');
   margin:20px auto;
   width:80%;
   li{
-    color:#fff;
+    color: white;
+    font-style:bold;
     text-align:center;
     display:block;
     text-transform:capitalize;
-    font-weight:lighter;
-    font-size:.9em;
+    font-weight:bold;
+    font-size:14px;
     height:30px;
     line-height:30px;
   }
