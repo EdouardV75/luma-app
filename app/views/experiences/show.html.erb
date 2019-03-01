@@ -2,7 +2,10 @@
 <div class="wrapper-1">
 
 	<div class="show-image">
-		
+
+<div class="row">
+    <div class="col-sm-12">
+
 		<div class="img-xp">
 			<%= image_tag @experience.photo_experience; %>
 		</div>
@@ -16,24 +19,26 @@
 			<h2> Notre partenaire :</h2>
 			<div class="show-image-logo-partner">
 				<%= image_tag @experience.partner_logo, height: 80 %>
-			</div>		
+			</div>
 		</div>
 	</div>
 
 	<div class="experience-info">
-		<h2><%= @experience.name %></h2>	
+		<h2><%= @experience.name %></h2>
+    <br>
 		<p> <%= @experience.description %></p>
-		<i class="far fa-share-square"></i>
-		<i class="far fa-heart"></i>
 
 		<div class="e-button-show">
 			<button class="btn-show">
 				<span class="text">
-						Je réserve ! 
+						Je réserve !
 				</span>
 			</button>
 		</div>
 
 	</div>
+
+   </div>
+  </div>
 
 </div>

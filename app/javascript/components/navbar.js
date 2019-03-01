@@ -15,7 +15,7 @@ const initUpdateNavbarOnScroll = () => {
         navbar.classList.remove('navbar-wagon-white');
         whiteLogo.classList.remove('hidden')
         blueLogo.classList.add('hidden')
-        
+
       }
     });
   }

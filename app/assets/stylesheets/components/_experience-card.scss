@@ -8,13 +8,16 @@ $cardHeight: auto;
   font-family: $body-font;
   display: flex;
   position: static;
+  min-height: calc(100vh - 130px);
+  background-color: white;
 }
 
 .container-cards {
-  padding-top: 21px;
+  padding-top: 35px;
   margin-right: auto;
   margin-left: auto;
   width: 85%;
+  padding-right: 10px;
 }
 
 
@@ -28,7 +31,7 @@ $cardHeight: auto;
   transition: $transition;
   transform: scale(0.95);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.03);
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .filtered-out {

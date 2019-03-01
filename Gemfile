@@ -20,8 +20,11 @@ gem 'uglifier'
 gem 'webpacker'
 gem "pundit"
 gem 'postmark-rails'
+
 gem 'devise_invitable', '~> 2.0.0'
 gem 'postmark-rails'
+gem 'sidekiq'
+gem 'sidekiq-failures', '~> 1.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

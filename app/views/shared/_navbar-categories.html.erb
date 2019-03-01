@@ -1,6 +1,9 @@
 <div class="navbar-categories">
   <div class="category-container">
     <ul class="tabs-category flex">
+      <%= link_to experiences_path, class: "accent-bottom-line" do %>
+      <li class="tab-category">Tous</li>
+      <% end %>
       <% Category.all.each do |category| %>
         <%= link_to experiences_path(category: category.name), class: "accent-bottom-line" do %>
           <li class="tab-category"><%= category.name %></li>

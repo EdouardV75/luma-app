@@ -1,5 +1,6 @@
 body {
   color: $dark-gray;
+  background-color: white;
 }
 
 .block {
@@ -9,4 +10,8 @@ body {
 
 .flex {
   display: flex;
+}
+
+.body-height {
+  min-height: calc(100vh - 70px);
 }

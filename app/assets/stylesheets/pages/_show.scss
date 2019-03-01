@@ -1,18 +1,19 @@
 .wrapper-1 {
 	width: 100%;
-	margin: 0 auto 0; 
+  height: 100vh;
+	margin: 0 auto 0;
 	padding:30px;
 	display: flex;
 	flex-direction: row;
 	background-color: white;
 	justify-content: center;
 	align-items: flex-start;
-	// flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 .show-image {
 	display: flex;
-	flex-direction: column; 
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
 	margin-right: 50px;
@@ -57,11 +58,10 @@
 
 
 	.partner {
-		display:flex; 
+		display:flex;
 		flex-direction: row;
 		position: relative;
 	    top: -30px;
-	    left: 30px;
 		h2 {
 			color: $dark-blue;
 			font-size: 16px;
@@ -82,20 +82,4 @@
 		color: $dark-gray;
 		text-align: justify;
 		 width: 750px;
-	}
-
-	.fa-share-square {
-		position: absolute;
-		top: 160px;
-        right: 100px;
-		color: $dark-gray;
-		opacity: 0.8;
-	}
-	.fa-heart {
-		position: absolute;
-		top: 160px;
-		right: 70px;
-		color: $dark-gray;
-		opacity: 0.8;
-
 	}

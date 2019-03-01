@@ -70,11 +70,10 @@
 	@include centre();
 	width:20%;
 	text-align:center;
-	
+
 	.btn-show{
 		@include font-size(2, 2.8);
 		transition:all .2s ease-in-out;
-		
 		height:78px;
 		border:none;
 		background: transparent;
@@ -82,7 +81,9 @@
 		position:relative;
 		outline:none;
 		width:260px;
-		
+    margin-bottom:500px;
+    margin-left:100px;
+
 		span {
 			position:absolute;
 			top:50%;
@@ -92,7 +93,7 @@
 			transition:all .3s ease-in-out;
 			color: $dark-blue;
 		}
-		
+
 		&:before{
 			border-radius:30px;
 			content:" ";
@@ -109,7 +110,7 @@
 			box-sizing:border-box;
 
 		}
-		
+
 		&:after{
 			@include fontawesome;
 			content:'\f00c';
@@ -122,22 +123,22 @@
 			color: white;
 			transition:all .2s ease-in-out;
 		}
-		
+
 		&:hover{
 			cursor:pointer;
 			transform:scale(1.05) translateY(-5px) translateZ(0);
 
-			
+
 			&:before{
 				background: transparent;
 				box-shadow:0 5px 10px rgba(0,0,0,0.2), 0 15px 20px rgba(0,0,0,0.1);
 
 			}
 		}
-		
+
 		&:active{
 			transform:scale(1) translateY(0) translateZ(0);
-			
+
 			&:before{
 				box-shadow:none;
 			}
@@ -146,11 +147,11 @@
 			//Comment out if you want the button to popup again
 			transform:scale(1) translateY(0) translateZ(0);
 
-			
+
 			&:before{
 				box-shadow:none;
 			}
-		}	
-			
+		}
+
 	}
 }

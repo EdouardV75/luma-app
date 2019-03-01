@@ -1,22 +1,19 @@
 <div class="navbar-wagon navbar-fixed-top navbar-wagon-white">
   <!-- Logo -->
-  
+
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logo_luma.svg", height: 50 %>
   <% end %>
 
   <div class="links-homepage">
     <% if user_signed_in? %>
-     
+
       <!-- Links when logged in -->
       <% if current_user.office_manager %>
-        <%= link_to "Mon dashboard", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-        <%= link_to "Mes commandes", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <% else %>
-        <%= link_to "Mes commandes", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+        <%= link_to "Mon dashboard", dashboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <% end %>
     </div>
-  
+
 
 
   <!-- Right Navigation -->
@@ -36,8 +33,12 @@
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <% if current_user.first_name == 'Edouard'%>
+            <%= image_tag "https://res-2.cloudinary.com/crunchbase-production/image/upload/c_thumb,h_120,w_120,f_auto,g_faces,z_0.7,b_white,q_auto:eco/faoyjlnu8zbq5tuz7zzq", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+            <% else %>
+            <%= image_tag 'default-user.png', class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <% end %>
+            </li>
             <li>
               <%= link_to "#" do %>
                 <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
