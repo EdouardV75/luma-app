@@ -2,6 +2,9 @@ class ExperiencesController < ApplicationController
   def index
     if params[:query].present?
       @experiences = Experience.global_search(params[:query])
+    elsif params[:category].present?
+      @category = Category.where(name: params[:category])
+      @experiences = Experience.where(category_id: @category.ids)
     else
       @experiences = Experience.all
     end
