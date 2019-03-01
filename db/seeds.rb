@@ -19,10 +19,10 @@ Company.create!(name: "Luma", logo:'logo_luma_white.png')
 
 puts 'Creating users...'
 
-user1 = User.create!(email: "alex@yahoo.fr", password: "azerty", first_name: "Alex", last_name: "Cousin", company_id: company1.id)
-user2 = User.create!(email: "adamdylan.p@gmail.com", password: "azerty", first_name: "Dylan", last_name: "Adam", company_id: company1.id)
-user3 = User.create!(email: "claire.edith.demont@gmail.com", password: "azerty", first_name: "Claire", last_name: "Demont", company_id: company1.id)
-user4 = User.create!(email: "edouard.vaudour@icloud.com", password: "azerty", first_name: "Edouard", last_name: "Vaudour", company_id: company1.id)
+user1 = User.create!(email: "alex@yahoo.fr", password: "azerty", first_name: "Alex", last_name: "Cousin", company_id: company1.id, office_manager: true)
+user2 = User.create!(email: "adamdylan.p@gmail.com", password: "azerty", first_name: "Dylan", last_name: "Adam", company_id: company1.id, office_manager: true)
+user3 = User.create!(email: "claire.edith.demont@gmail.com", password: "azerty", first_name: "Claire", last_name: "Demont", company_id: company1.id, office_manager: true)
+user4 = User.create!(email: "edouard.vaudour@icloud.com", password: "azerty", first_name: "Edouard", last_name: "Vaudour", company_id: company1.id, office_manager: true)
 
 puts 'Creating categories...'
 
