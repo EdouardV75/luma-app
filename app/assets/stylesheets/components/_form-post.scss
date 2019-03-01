@@ -1,23 +1,29 @@
-// Form design
+.wrapper-form {
+  height: 100vh ;
+}
+
 .form-post {
   background: white;
-  margin-top: 30px;
+  margin-top: 165px;
   padding: 20px;
   border-radius: 5px;
-  }
+  margin-bottom: 10px;
+  
   h1 {
     text-align: center;
+    font-weight: bold;
     font-size: 25px;
-    color: #666666;
+    color: $dark-blue;
     margin-bottom: 50px;
-    margin-top: 50px;
+    margin-top: 0px;
   }
   .btn {
     width: 100%;
     padding: 10px;
     font-weight: bold;
-
+  }
 }
+
 // Checkboxes design
 .category-choices {
   display: flex;
@@ -28,17 +34,19 @@
 
 .category-choice {
   background: #b7b7b7;
+  color: $dark-blue;
   padding: 20px;
   border-radius: 5px;
   opacity: .4;
   flex: 0 0 30%;
   text-align: center;
+  font-size: 13px;
   &:hover {
     opacity: 1;
     cursor: pointer;
   }
   &.active {
-  background: $brand-primary;
+  background: $dark-blue;
   color: white;
   opacity: 1;
   }

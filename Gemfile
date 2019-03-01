@@ -19,6 +19,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem "pundit"
+gem 'postmark-rails'
 
 gem 'devise_invitable', '~> 2.0.0'
 gem 'postmark-rails'
