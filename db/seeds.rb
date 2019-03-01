@@ -64,10 +64,10 @@ Experience.create!(name: 'Les meilleurs Escapes Games',
   description: "HintHunt vous propose de vivre une aventure unique et hors du commun.
 Enfermés dans une salle avec votre équipe de 3 à 5 joueurs, vous avez 60 minutes pour trouver le moyen de vous échapper !
 A vous de trouver les indices cachés dans la salle et de résoudre ensemble les énigmes qui vous permettront de vous évader ! Une expérience inoubliable dans laquelle rapidité, logique, et esprit d'équipe seront vos meilleurs alliés",
-  partner_logo: 'HintHunt_logo.png',
+  partner_logo: 'hinthunt_logo.png',
   category_id: '2',
   partner_name: 'HintHunt',
-  photo_experience: 'HintHunt_xp.jpg',
+  photo_experience: 'hinthunt_xp.jpg',
 )
 
 Experience.create!(name: 'Une expérience unique de Réalité Virtuelle',
@@ -214,7 +214,7 @@ Experience.create!(name: "Une box 6 spectacles",
   luma_price: '69',
   public_price: '99',
   validity_date: '12/31/19',
-  description: "Que vous cherchiez la parfaite crème qui apaisera votre peau sensible, le spray cheveux qui saura dompter votre crinière ou le rouge à lèvres de vos rêves, on s’occupe de tout ! Tous nos produits sont sélectionnés avec soin.",
+  description: "Le cadeau spectacle par excellence ! Offrez (ou offrez-vous) ce pack contenant 6 places qui vous permettra de choisir par plus de 1100 spectacles par mois, dans l'une de nos 300 salles partenaires dont les plus prestigieuses.",
   partner_logo: 'otheatro_logo.png',
   category_id: '8',
   partner_name: 'Otheatro',
