@@ -11,9 +11,6 @@
       <!-- Links when logged in -->
       <% if current_user.office_manager %>
         <%= link_to "Mon dashboard", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-        <%= link_to "Mes commandes", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <% else %>
-        <%= link_to "Mes commandes", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <% end %>
     </div>
 
@@ -38,6 +35,11 @@
         <div class="dropdown">
           <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li>
+              <%= link_to "#" do %>
+                <i class="fas fa-shopping-cart"></i><%= t(".profile", default: "Mes commandes") %>
+              <% end %>
+            </li>
             <li>
               <%= link_to "#" do %>
                 <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
