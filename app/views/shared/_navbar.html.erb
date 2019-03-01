@@ -8,28 +8,29 @@
   <div class="links-homepage">
     <% if user_signed_in? %>
 
-      <!-- Links when logged in -->
-      <% if current_user.office_manager %>
-        <%= link_to "Mon dashboard", dashboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <% end %>
-    </div>
+    <!-- Search Bar -->
+      <div class="searchbar">
+        <% if user_signed_in? %>
+        <%= form_tag experiences_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "search__input",
+            placeholder: "Que recherchez-vous ?"
+          %>
+          <% end %>
+        <% end %>
+      </div>
+
+  </div>
 
 
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-    <!-- Search Bar -->
-  <div class="searchbar">
-  <% if user_signed_in? %>
-  <%= form_tag experiences_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "search__input",
-      placeholder: "Que recherchez-vous ?"
-    %>
-    <% end %>
-  <% end %>
-  </div>
+      <!-- Links when logged in -->
+      <% if current_user.office_manager %>
+        <%= link_to "Mon dashboard", dashboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <% end %>
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
@@ -38,10 +39,15 @@
             <% else %>
             <%= image_tag 'default-user.png', class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <% end %>
-            </li>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>
                 <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <i class="fas fa-shopping-cart"></i><%= t(".profile", default: "Mes commandes") %>
               <% end %>
             </li>
             <li>
