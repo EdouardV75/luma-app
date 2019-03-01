@@ -10,3 +10,7 @@ body {
 .flex {
   display: flex;
 }
+
+.body-height {
+  min-height: calc(100vh - 70px);
+}
