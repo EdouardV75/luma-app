@@ -26,5 +26,6 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:accept_invitation, keys: %i(email first_name last_name company_id password password_confirmation invitation_token))
     devise_parameter_sanitizer.permit(:invite, keys: %i(email first_name last_name company_id password password_confirmation invitation_token))
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i(email first_name last_name company_id password password_confirmation office_manager invitation_token))
   end
 end
