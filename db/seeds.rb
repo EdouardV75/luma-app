@@ -19,10 +19,10 @@ Company.create!(name: "Luma", logo:'logo_luma_white.png')
 
 puts 'Creating users...'
 
-user1 = User.create!(email: "alex@yahoo.fr", password: "azerty", first_name: "Alex", last_name: "Cousin", company_id: company1.id)
-user2 = User.create!(email: "adamdylan.p@gmail.com", password: "azerty", first_name: "Dylan", last_name: "Adam", company_id: company1.id)
-user3 = User.create!(email: "claire.edith.demont@gmail.com", password: "azerty", first_name: "Claire", last_name: "Demont", company_id: company1.id)
-user4 = User.create!(email: "edouard.vaudour@icloud.com", password: "azerty", first_name: "Edouard", last_name: "Vaudour", company_id: company1.id)
+user1 = User.create!(email: "alex@yahoo.fr", password: "azerty", first_name: "Alex", last_name: "Cousin", company_id: company1.id, office_manager: true)
+user2 = User.create!(email: "adamdylan.p@gmail.com", password: "azerty", first_name: "Dylan", last_name: "Adam", company_id: company1.id, office_manager: true)
+user3 = User.create!(email: "claire.edith.demont@gmail.com", password: "azerty", first_name: "Claire", last_name: "Demont", company_id: company1.id, office_manager: true)
+user4 = User.create!(email: "edouard.vaudour@icloud.com", password: "azerty", first_name: "Edouard", last_name: "Vaudour", company_id: company1.id, office_manager: true)
 
 puts 'Creating categories...'
 
@@ -64,7 +64,7 @@ Experience.create!(name: 'Les meilleurs Escapes Games',
   description: "HintHunt vous propose de vivre une aventure unique et hors du commun.
 Enfermés dans une salle avec votre équipe de 3 à 5 joueurs, vous avez 60 minutes pour trouver le moyen de vous échapper !
 A vous de trouver les indices cachés dans la salle et de résoudre ensemble les énigmes qui vous permettront de vous évader ! Une expérience inoubliable dans laquelle rapidité, logique, et esprit d'équipe seront vos meilleurs alliés",
-  partner_logo: 'hinthunt_logo.png',
+  partner_logo: 'HintHunt_logo.png',
   category_id: '2',
   partner_name: 'HintHunt',
   photo_experience: 'HintHunt_xp.jpg',
