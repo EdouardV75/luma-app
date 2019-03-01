@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :experiences, through: :orders
   belongs_to :company
 
+  # after_create :send_invitation_email
   after_invitation_accepted :send_welcome_email
 
   private

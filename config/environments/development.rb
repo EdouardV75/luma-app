@@ -1,5 +1,4 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "http://localhost:3000" }
   # Verifies that versions and hashed value of the package contents in the project's package.json
   config.webpacker.check_yarn_integrity = true
   # Settings specified here will take precedence over those in config/application.rb.
@@ -38,8 +37,14 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.default_url_options = { host: "http://localhost:3000" }
   config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # Pour tester postmatk en environnement de dev -- NE PAS DECOMMENTER
+  # config.action_mailer.delivery_method     = :postmark
+  # config.action_mailer.postmark_settings   = { api_key: ENV["POSTMARK_API_KEY"] }
+  # config.action_mailer.default_url_options = { host: "luma-app.com" }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
