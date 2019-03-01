@@ -1,1 +1,39 @@
 <%= render 'shared/navbar-categories' %>
+<div class="wrapper-1">
+
+	<div class="show-image">
+		
+		<div class="img-xp">
+			<%= image_tag @experience.photo_experience; %>
+		</div>
+
+		<div class="price-container-show">
+			<h3 class="price-after"><%= @experience.luma_price.to_i %>€</h3>
+			<h4 class="price-before"><%= @experience.public_price.to_i %>€</h4>
+		</div>
+
+		<div class="partner">
+			<h2> Notre partenaire :</h2>
+			<div class="show-image-logo-partner">
+				<%= image_tag @experience.partner_logo, height: 80 %>
+			</div>		
+		</div>
+	</div>
+
+	<div class="experience-info">
+		<h1><%= @experience.name %></h1>	
+		<p> <%= @experience.description %></p>
+		<i class="far fa-share-square"></i>
+		<i class="far fa-heart"></i>
+
+		<div class="e-button-show">
+			<button class="btn-show">
+				<span class="text">
+						Je réserve ! 
+				</span>
+			</button>
+		</div>
+
+	</div>
+
+</div>
