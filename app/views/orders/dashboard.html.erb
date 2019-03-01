@@ -1,4 +1,4 @@
-<h1>This is the dashboard</h1>
+<h1><%= "#{@user.company.name} dashboard" %></h1>
 
 <div class="dashboard-menu-wrapper wrapper">
   <div class="dashboard-header container">
@@ -14,13 +14,14 @@
   <div class="dashboard-tabs container">
 
     <div class="row">
-      <div class="tab-un-dashboard">
-        <p>Tab 1</p>
+      <div class="tab-un-dashboard tab-content-center">
+        <p> Work in progress ...</p>
+        <%= image_tag("dashboard_cut") %>
       </div>
     </div>
 
     <div class="row">
-      <div class="tab-deux-collaborateurs hidden">
+      <div class="tab-deux-collaborateurs hidden tab-content-center">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
