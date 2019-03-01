@@ -2,8 +2,10 @@
   width: 100%;
   background-color: white;
   text-align: center;
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1),0 1px 0 0 rgba(0,0,0,0.03);
-}
+  border-bottom: 0.2px solid rgba(22, 52, 135, 0.3);
+  -webkit-box-shadow: 0px 5px 9px 0px rgba(22,52,135,0.3);
+  -moz-box-shadow: 0px 5px 9px 0px rgba(22,52,135,0.3);
+  box-shadow: 0px 5px 9px 0px rgba(22,52,135,0.3);}
 
 
 .category-container {
@@ -30,7 +32,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   padding-left: 0px;
-  padding-top: 15px;
+  padding-top: 17px;
   margin-bottom: 0;
   font-family: $headers-font;
   cursor: pointer;
