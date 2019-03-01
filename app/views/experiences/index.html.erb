@@ -6,12 +6,11 @@
         <% @experiences.each do |experience| %>
           <div class="results-card" data-category="<%= experience.category.name %>">
             <div class="col-xs-12 col-sm-6 col-lg-4">
-              <li class="experience-card" >
+              <li class="experience-card">
                 <%= image_tag experience.photo_experience, class: "card-image" %>
                 <div class="price-container fix-top-right block">
                   <h3 class="price "><%= experience.luma_price.to_i %>€</h3>
                   <h4 class="price"><%= experience.public_price.to_i %>€</h3>
-
                 </div>
                 <div class="card-player">
                   <div id="player"></div>
