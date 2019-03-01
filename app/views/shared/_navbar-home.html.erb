@@ -24,9 +24,6 @@
       <!-- Links when logged in -->
       <% if current_user.office_manager %>
         <%= link_to "Mon dashboard", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-        <%= link_to "Mes commandes", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <% else %>
-        <%= link_to "Mes commandes", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <% end %>
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -36,6 +33,11 @@
             <li>
               <%= link_to "#" do %>
                 <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <i class="fas fa-shopping-cart"></i> <%= t(".profile", default: "Mes commandes") %>
               <% end %>
             </li>
             <li>
