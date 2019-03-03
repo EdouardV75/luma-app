@@ -30,8 +30,8 @@
   list-style: none;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding-left: 5px;
   padding-top: 17px;
+  padding-left: 0px;
   margin-bottom: 0;
   font-family: $headers-font;
   cursor: pointer;
@@ -40,8 +40,7 @@
 
 .tab-category {
   height: 100%;
-  width: 110px;
-  margin-right: 15px;
+  width: auto;
   &:last-of-type {
     margin-right: 0;
   }
