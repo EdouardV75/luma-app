@@ -25,6 +25,7 @@ user1 = User.create!(email: "alex@yahoo.fr", password: "azerty", first_name: "Al
 user2 = User.create!(email: "adamdylan.p@gmail.com", password: "azerty", first_name: "Dylan", last_name: "Adam", company_id: company1.id, office_manager: true)
 user3 = User.create!(email: "claire.edith.demont@gmail.com", password: "azerty", first_name: "Claire", last_name: "Demont", company_id: company1.id, office_manager: true)
 user4 = User.create!(email: "edouard.vaudour@icloud.com", password: "azerty", first_name: "Edouard", last_name: "Vaudour", company_id: company5.id, office_manager: true)
+user5 = User.create!(email: "florent.lienard@lewagon.org", password: "azerty", first_name: "Florent", last_name: "Lienard", company_id: company5.id, office_manager: true)
 
 puts 'Creating categories...'
 
