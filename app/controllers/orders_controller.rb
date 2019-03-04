@@ -30,6 +30,7 @@ class OrdersController < ApplicationController
     @orders = current_user.company.orders
     @user_to_create = User.new
     @order = Order.new
+    @employees = User.where(company: @user.company)
   end
 
    # def edit
