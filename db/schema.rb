@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 2019_03_04_111804) do
     t.string "photo_experience"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "partner_description"
     t.integer "price_cents", default: 0, null: false
+    t.text "partner_description"
     t.index ["category_id"], name: "index_experiences_on_category_id"
   end
 
