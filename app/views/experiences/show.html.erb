@@ -1,5 +1,9 @@
 <%= render 'shared/navbar-categories' %>
 
+<% content_for :meta_title, "#{@experience.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @experience.description %>
+<% content_for :meta_image, cl_image_path(@experience.photo_experience) %>
+
 <div class="wrapper-1">
   <div class="container">
     <div class="row">
@@ -21,7 +25,7 @@
             <div class="experience-details-show flex">
               <div class="validity_date flex">
                 <i class="fas fa-calendar-alt"></i>
-                <%= @experience.validity_date %>
+                <%= @experience.validity_date.strftime("%d/%m") %>
               </div>
               <div class="price-container-show flex">
                 <div class="prix-public flex">
@@ -30,7 +34,7 @@
                 </div>
                 <div class="prix-luma flex">
                   <%= image_tag "logo_luma.svg", height: 25 %>
-                  <p><%= @experience.price_cents.to_i %>€</p>
+                  <p><%= humanized_money(@experience.price) %>€</p>
                 </div>
               </div>
             </div>
@@ -62,7 +66,7 @@
             <%= image_tag @experience.partner_logo %>
           </div>
 
-          <div>
+          <div class="stripe">
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                 data-name="Mon avantage"
