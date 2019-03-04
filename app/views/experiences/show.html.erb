@@ -30,7 +30,7 @@
                 </div>
                 <div class="prix-luma flex">
                   <%= image_tag "logo_luma.svg", height: 25 %>
-                  <p><%= @experience.price_cents.to_i %>€</p>
+                  <p><%= humanized_money(@experience.price) %>€</p>
                 </div>
               </div>
             </div>
