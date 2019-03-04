@@ -28,4 +28,12 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:invite, keys: %i(email first_name last_name company_id password password_confirmation invitation_token))
     devise_parameter_sanitizer.permit(:sign_up, keys: %i(email first_name last_name company_id password password_confirmation office_manager invitation_token))
   end
+
+  def after_accept_path_for(resource)
+    new_post_path
+  end
+
+  def after_invite_path_for(resource)
+    dashboard_path
+  end
 end

@@ -1,44 +1,70 @@
 <%= render 'shared/navbar-categories' %>
+
 <div class="wrapper-1">
+  <div class="container">
+    <div class="row">
 
-	<div class="show-image">
+<!-- Partie gauche experience -->
+      <div class="col-sm-12 col-lg-8">
 
-<div class="row">
-    <div class="col-sm-12">
+        <div class="experience-card-show">
+          <div class="img-xp">
+            <%= image_tag @experience.photo_experience; %>
+          </div>
 
-		<div class="img-xp">
-			<%= image_tag @experience.photo_experience; %>
-		</div>
+          <div class="experience-infos-show">
+            <div class="experiences-text-show">
+              <h2><%= @experience.name %></h2>
+              <p> <%= @experience.description %></p>
+            </div>
 
-		<div class="price-container-show">
-			<h3 class="price-after"><%= @experience.luma_price.to_i %>€</h3>
-			<h4 class="price-before"><%= @experience.public_price.to_i %>€</h4>
-		</div>
+            <div class="experience-details-show flex">
+              <div class="validity_date flex">
+                <i class="fas fa-calendar-alt"></i>
+                <%= @experience.validity_date %>
+              </div>
+              <div class="price-container-show flex">
+                <div class="prix-public flex">
+                  <p id="public-price">Prix public</p>
+                  <p><%= @experience.public_price.to_i %>€</p>
+                </div>
+                <div class="prix-luma flex">
+                  <%= image_tag "logo_luma.svg", height: 25 %>
+                  <p><%= @experience.luma_price.to_i %>€</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-		<div class="partner">
-			<h2> Notre partenaire :</h2>
-			<div class="show-image-logo-partner">
-				<%= image_tag @experience.partner_logo, height: 80 %>
-			</div>
-		</div>
-	</div>
+      </div>
 
-	<div class="experience-info">
-		<h2><%= @experience.name %></h2>
-    <br>
-		<p> <%= @experience.description %></p>
+<!-- Partie droite partenaire -->
 
-		<div class="e-button-show">
-			<button class="btn-show">
-				<span class="text">
-						Je réserve !
-				</span>
-			</button>
-		</div>
+      <div class="col-sm-12 col-lg-4">
 
-	</div>
+        <div class="partner">
+          <div class="partner-title flex">
+            <h2>Notre partenaire</h2>
+          </div>
+          <div class="partner-name">
+            <h3><%= @experience.partner_name %></h3>
+          </div>
+          <div class="partner-description">
+            <p><%= @experience.partner_description %></p>
+            <span id="plus-d-infos">plus d'infos</span>
+          </div>
+          <div class="show-image-logo-partner">
+            <%= image_tag @experience.partner_logo %>
+          </div>
+          </div>
+            <a class="payer" href="">Profiter de l'avantage</a>
+          </div>
+        </div>
 
-   </div>
+      </div>
+
+    </div>
+
   </div>
-
 </div>

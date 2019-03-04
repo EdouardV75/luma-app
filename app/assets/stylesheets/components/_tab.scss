@@ -1,7 +1,7 @@
 
 .tabs {
   justify-content: center;
-   display: flex;
+  display: flex;
   list-style: none;
 }
 
@@ -12,8 +12,8 @@
 
 .tabs li {
   color: rgb(20,20,20);
-  font-size: 16px;
-  padding: 20px 40px;
+  font-size: 14px;
+  padding: 10px 20px;
   cursor: pointer;
   background-color: $light-gray;
   margin-bottom: 0px;
@@ -23,7 +23,6 @@
 
 .tabs li.active {
   color: white;
-  padding: 20px 40px;
   cursor: pointer;
   background-color: $dark-blue;
 }
@@ -34,4 +33,13 @@
 
 .tab-content-center {
   text-align: center;
+}
+
+.dashboard-header.container {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+ul.tabs.flex {
+  padding: 0px;
 }
