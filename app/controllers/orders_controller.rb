@@ -6,22 +6,16 @@ class OrdersController < ApplicationController
   end
 
   def new
-    @experience = Experience.find(params[:id])
+    @experience = Experience.find(params[:experience_id])
     @order = Order.new
     authorize @order
   end
 
   def create
-    @order = Order.new(order_params)
-    authorize @order
     @experience = Experience.find(params[:experience_id])
-    @order.experience = @experience
-    @order.user = current_user
-    if @order.save
-      redirect_to dashboard_path
-    else
-      render "orders/show"
-    end
+    @order = Order.create!(experience: @experience, amount: @experience.price, state: 'pending', user: current_user)
+    authorize @order
+    redirect_to new_order_payment_path(@order)
   end
 
   def dashboard
@@ -30,6 +24,11 @@ class OrdersController < ApplicationController
     @orders = current_user.company.orders
     @user_to_create = User.new
     @order = Order.new
+  end
+
+  def show
+    @order = current_user.orders.where(state: 'paid').find(params[:id])
+    authorize @order
   end
 
    # def edit
@@ -47,7 +46,6 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:status, :order_id, :experience_id)
+    params.require(:order).permit(:amount, :state, :user_id)
   end
-
 end

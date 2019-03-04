@@ -2,7 +2,7 @@ class CreateExperiences < ActiveRecord::Migration[5.2]
   def change
     create_table :experiences do |t|
       t.string :name
-      t.float :luma_price
+      t.float :price
       t.float :public_price
       t.date :validity_date
       t.text :description
