@@ -10,7 +10,7 @@
           <li class="experience-card" >
             <div class="card-image" style="background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url('<%= image_path experience.photo_experience %>');"></div>
             <div class="price-container fix-top-right block">
-              <h3><%= humanized_money_with_symbol(experience.price) %></h3>
+              <h3><%= humanized_money(experience.price) %></h3>
               <h4 class="price"><%= experience.public_price.to_i %>€</h3>
               </div>
               <div class="card-player">
@@ -38,7 +38,7 @@
                   </div>
                   <p class="text-autocrop"> <%= experience.description %> </p>
                 </div>
-                <a class="button-cards" href="/experiences/<%= experience.id %>">Réservez</a>
+                <a class="button-cards" href="/experiences/<%= experience.id %>">Plus d'informations</a>
               </div>
             </li>
           </div>

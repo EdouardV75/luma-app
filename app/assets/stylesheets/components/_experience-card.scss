@@ -118,7 +118,7 @@ $cardHeight: auto;
 
   .genre {
     color: $light-gray;
-    margin-top: 0.4rem;
+    margin-top: 1.2rem;
     padding-left: 10px;
     font-size: 16px;
     transition: $transition;
@@ -218,6 +218,8 @@ $cardHeight: auto;
     padding-bottom: 10px;
     transform: translateY(33px) translateX(10px);
     font-size:16px;
+    width: 60%;
+
 
     &:after {
       width: 85%;
