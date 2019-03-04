@@ -9,7 +9,7 @@
               <li class="experience-card">
                 <%= image_tag experience.photo_experience, class: "card-image" %>
                 <div class="price-container fix-top-right block">
-                  <h3><%= humanized_money_with_symbol(experience.price) %></h3>
+                  <h3><%= humanized_money(experience.price) %>€</h3>
                   <h4 class="price"><%= experience.public_price.to_i %>€</h3>
                 </div>
                 <div class="card-player">
