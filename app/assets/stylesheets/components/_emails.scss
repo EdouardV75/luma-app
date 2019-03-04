@@ -1,0 +1,152 @@
+ .ReadMsgBody {
+    width: 100%;
+    background-color: #ffffff;
+  }
+
+  .ExternalClass {
+    width: 100%;
+    background-color: #ffffff;
+  }
+
+  .ExternalClass,
+  .ExternalClass p,
+  .ExternalClass span,
+  .ExternalClass font,
+  .ExternalClass td,
+  .ExternalClass div {
+    line-height: 100%;
+  }
+
+  html {
+    width: 100%;
+  }
+
+  body {
+    font-family: $body-font;
+  }
+
+  table {
+    border-spacing: 0;
+    table-layout: fixed;
+    margin: 0 auto;
+  }
+
+  table table table {
+    table-layout: auto;
+  }
+
+  img {
+    display: block !important;
+    overflow: hidden !important;
+  }
+
+  table td {
+    border-collapse: collapse;
+  }
+
+  .yshortcuts a {
+    border-bottom: none !important;
+  }
+
+  a {
+    color: #3498db;
+    text-decoration: none;
+  }
+
+  .textbutton a {
+    font-family: $body-font;
+    color: #ffffff !important;
+  }
+
+  .footer-link a {
+    color: #979797 !important;
+  }
+
+  a:-webkit-any-link {
+    text-decoration:none;
+  }
+
+  /*Responsive*/
+
+  @media only screen and (max-width: 590px) {
+    body {
+      width: auto !important;
+    }
+    table[class="MOON-600"] {
+      width: 450px !important;
+    }
+    table[class="MOON-inner"] {
+      width: 90% !important;
+    }
+    table[class="MOON2-2"] {
+      width: 47% !important;
+      text-align: left !important;
+    }
+    table[class="MOON3-3"] {
+      width: 100% !important;
+      text-align: center !important;
+    }
+    table[class="MOON1-3"] {
+      width: 29% !important;
+    }
+    table[class="MOON3-1"] {
+      width: 64% !important;
+      text-align: left !important;
+    }
+    td[class="header-td"] {
+      height: 50px !important;
+      max-height: 50px !important;
+      line-height: 0px !important;
+    }
+    td[class="td-hide"] {
+      height: 0px !important;
+      max-height: 0px !important;
+      line-height: 0px !important;
+    }
+    /* Image */
+    img[class="img1"] {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+
+  @media only screen and (max-width: 479px) {
+    body {
+      width: auto !important;
+    }
+    table[class="MOON-600"] {
+      width: 290px !important;
+    }
+    table[class="MOON-inner"] {
+      width: 82% !important;
+    }
+    table[class="MOON2-2"] {
+      width: 100% !important;
+      text-align: center !important;
+    }
+    table[class="MOON3-3"] {
+      width: 100% !important;
+      text-align: center !important;
+    }
+    table[class="MOON1-3"] {
+      width: 100% !important;
+    }
+    table[class="MOON3-1"] {
+      width: 100% !important;
+      text-align: center !important;
+    }
+    td[class="header-td"] {
+      height: 50px !important;
+      max-height: 20px !important;
+      line-height: 0px !important;
+    }
+    td[class="td-hide"] {
+      height: 0px !important;
+      max-height: 0px !important;
+      line-height: 0px !important;
+    }
+    /* image */
+    img[class="img1"] {
+      width: 100% !important;
+    }
+  }

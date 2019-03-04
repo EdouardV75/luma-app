@@ -43,8 +43,8 @@ puts 'Creating experiences...'
 
 #Cinéma
 Experience.create!(name: "Une année avec les meilleurs films",
-  luma_price: '49,90',
-  public_price: '71,88',
+  price: '49.90',
+  public_price: '71.88',
   validity_date: '31/12/19',
   description: "Chaque jour, nous choisissons un nouveau film et vous avez un mois entier pour le regarder. Il y aura donc toujours 30 films parmi lesquels vous pourrez faire votre choix !",
   partner_logo: 'mubi_logo.png',
@@ -55,7 +55,7 @@ Experience.create!(name: "Une année avec les meilleurs films",
 )
 
 Experience.create!(name: "Un pass de 10 places de Cinéma",
-  luma_price: '59,90',
+  price: '59.90',
   public_price: '100',
   validity_date: '31/12/19',
   description: "Profitez de 10 places de cinéma chez notre partenaire ",
@@ -67,7 +67,7 @@ Experience.create!(name: "Un pass de 10 places de Cinéma",
 
 # Jeux
 Experience.create!(name: 'Les meilleurs Escapes Games',
-  luma_price: '69',
+  price: '69',
   public_price: '110',
   validity_date: '31/12/19',
   description: "HintHunt vous propose de vivre une aventure unique et hors du commun.
@@ -80,8 +80,8 @@ A vous de trouver les indices cachés dans la salle et de résoudre ensemble les
 )
 
 Experience.create!(name: 'Une expérience unique de Réalité Virtuelle',
-  luma_price: '19,90',
-  public_price: '29,90',
+  price: '19.90',
+  public_price: '29.90',
   validity_date: '31/12/19',
   description: "Incarna est une expérience à part qui vous plongera en plein coeur d'un univers onirique dont vous et vos amis êtes les héros !
 Prenez rendez-vous dans l'un de nos centres, venez nous rejoindre sur place et laissez-nous vous équiper de notre matériel de réalité virtuelle. Vous serez alors projetés dans une dimension étrange et mystérieuse préparée tout spécialement pour évaluer vos compétences et déterminer si vous avez ce qu'il faut pour devenir un explorateur !
@@ -94,7 +94,7 @@ Ce baptême du feu ne sera pas de tout repos, mais il ne sera que la première �
 
 #Voyages
 Experience.create!(name: "Un séjour inoubliable",
-  luma_price: '350',
+  price: '350',
   public_price: '500',
   validity_date: '31/12/19',
   description: "Choisissez parmi plus de 600 destinations avec notre partenaire",
@@ -105,7 +105,7 @@ Experience.create!(name: "Un séjour inoubliable",
 )
 
 Experience.create!(name: "Un week-end en amoureux",
-  luma_price: '220',
+  price: '220',
   public_price: '350',
   validity_date: '31/12/19',
   description: "Profitez d'un week-end pour 2 en France dans le lieu de votre choix",
@@ -117,7 +117,7 @@ Experience.create!(name: "Un week-end en amoureux",
 
 #Nature
 Experience.create!(name: "Adopte un corail",
-  luma_price: '20',
+  price: '20',
   public_price: '30',
   validity_date: '31/12/19',
   description: "Chaque geste compte. En adoptant un corail, vous contribuez à la préservation de l’environnement et vous soutenez les populations locales qui dépendent de l’océan pour survivre. C’est simple, facile, et utile 🐬",
@@ -128,7 +128,7 @@ Experience.create!(name: "Adopte un corail",
 )
 
 Experience.create!(name: "Offre un arbre",
-  luma_price: '69',
+  price: '69',
   public_price: '87',
   validity_date: '31/12/19',
   description: "Obtenez 3 Chênes sessile. En achetant des arbres, vous devenez propriétaire d’un actif forestier. L’arbre, en grandissant, est un bien qui prend intrinsèquement de la valeur avec le temps indépendamment de la demande ou du cours du bois 🌳",
@@ -140,7 +140,7 @@ Experience.create!(name: "Offre un arbre",
 
 #Beauté
 Experience.create!(name: "Votre box beauté",
-  luma_price: '8',
+  price: '8',
   public_price: '13',
   validity_date: '31/12/19',
   description: "Que vous cherchiez la parfaite crème qui apaisera votre peau sensible, le spray cheveux qui saura dompter votre crinière ou le rouge à lèvres de vos rêves, on s’occupe de tout ! Tous nos produits sont sélectionnés avec soin 💅",
@@ -151,7 +151,7 @@ Experience.create!(name: "Votre box beauté",
 )
 
 Experience.create!(name: "Votre kit voyage de soin pour homme",
-  luma_price: '10',
+  price: '10',
   public_price: '15',
   validity_date: '31/12/19',
   description: "Que vous cherchiez la parfaite crème qui apaisera votre peau sensible, le spray cheveux qui saura dompter votre crinière ou le rouge à lèvres de vos rêves, on s’occupe de tout ! Tous nos produits sont sélectionnés avec soin 🧔🏻",
@@ -163,8 +163,8 @@ Experience.create!(name: "Votre kit voyage de soin pour homme",
 
 #Déco
 Experience.create!(name: "Votre abonnement mensuel de fleurs",
-  luma_price: '19,99',
-  public_price: '38,99',
+  price: '19.99',
+  public_price: '38.99',
   validity_date: '31/12/19',
   description: "Quel bonheur de fleurir sa vie simplement, et en toute saison ! Chaque mois, offrez ou recevez un à quatre bouquets de fleurs fraîchement cueillies. Des créations uniques, composées avec soin par nos fleuristes, spécialement pour nos abonnés 💐",
   partner_logo: 'bergamotte_logo.jpg',
@@ -174,7 +174,7 @@ Experience.create!(name: "Votre abonnement mensuel de fleurs",
 )
 
 Experience.create!(name: "Votre oeuvre d'art préférée",
-  luma_price: '100',
+  price: '100',
   public_price: '120',
   validity_date: '31/12/19',
   description: "Un bon pour choisir votre oeuvre d'art préféré avec livraison offerte!",
@@ -185,7 +185,7 @@ Experience.create!(name: "Votre oeuvre d'art préférée",
 )
 
 Experience.create!(name: "Une photographie en édition limitée",
-  luma_price: '75',
+  price: '75',
   public_price: '89',
   validity_date: '31/12/19',
   description: "Photographie d'art en format classique, 24x32cm avec cadre noir. Œuvre en édition limitée et numérotée avec certificat d'authenticité",
@@ -197,7 +197,7 @@ Experience.create!(name: "Une photographie en édition limitée",
 
 #Presse
 Experience.create!(name: "Un abonnement annuel pour Usbek & Rica",
-  luma_price: '18',
+  price: '18',
   public_price: '24',
   validity_date: '31/12/19',
   description: "Trois numéros du magazine. Le magazine qui explore le futur. Tous les futurs : ceux qui nous font peur et ceux dont on rêve.",
@@ -209,7 +209,7 @@ Experience.create!(name: "Un abonnement annuel pour Usbek & Rica",
 
 #Culture
 Experience.create!(name: "Le meilleur de la culture",
-  luma_price: '18',
+  price: '18',
   public_price: '25',
   validity_date: '31/12/19',
   description: "Découvrez le pass culturel parisien! 🎭",
@@ -220,7 +220,7 @@ Experience.create!(name: "Le meilleur de la culture",
 )
 
 Experience.create!(name: "Une box 6 spectacles",
-  luma_price: '69',
+  price: '69',
   public_price: '99',
   validity_date: '31/12/19',
   description: "Le cadeau spectacle par excellence ! Offrez (ou offrez-vous) ce pack contenant 6 places qui vous permettra de choisir par plus de 1100 spectacles par mois, dans l'une de nos 300 salles partenaires dont les plus prestigieuses.",
@@ -232,19 +232,12 @@ Experience.create!(name: "Une box 6 spectacles",
 
 # #Gastronomie
 Experience.create!(name: "Mon panier de fruits et légumes",
-  luma_price: '20',
+  price: '20',
   public_price: '30',
   validity_date: '31/12/19',
   description: "Des fruits et légumes de saison",
   partner_logo: 'laruche_logo.png',
   category: culture,
-  partner_name: 'La ruche qui dit oui',
-  photo_experience: 'laruche_xp.jpg',
-)
-
-Experience.create!(name: "Une formation de 2h sur le café",
-  luma_price: '60',
-  public_price: '72',
   validity_date: '31/12/19',
   description: "Nous vous proposons un atelier Culture Café de 3 heures qui vous permettra de parcourir les essentiels de cet univers à travers l'histoire du café de spécialité, la chaîne de ses métiers, beaucoup d’images & une dégustation de nombreux cafés !",
   partner_logo: 'lomi_logo.jpg',
@@ -254,8 +247,8 @@ Experience.create!(name: "Une formation de 2h sur le café",
 )
 
 Experience.create!(name: "Un abonnement pour une box de vin",
-  luma_price: '50',
-  public_price: '71,67',
+  price: '50',
+  public_price: '71.67',
   validity_date: '31/12/19',
   description: "Que vous cherchiez la parfaite crème qui apaisera votre peau sensible, le spray cheveux qui saura dompter votre crinière ou le rouge à lèvres de vos rêves, on s’occupe de tout ! Tous nos produits sont sélectionnés avec soin.",
   partner_logo: 'petitballon_logo.jpg',
@@ -265,8 +258,8 @@ Experience.create!(name: "Un abonnement pour une box de vin",
 )
 
 Experience.create!(name: "Le meilleur du café livré chez vous",
-  luma_price: '4,90',
-  public_price: '9,90',
+  price: '4.90',
+  public_price: '9.90',
   validity_date: '31/12/19',
   description: "Que vous cherchiez la parfaite crème qui apaisera votre peau sensible, le spray cheveux qui saura dompter votre crinière ou le rouge à lèvres de vos rêves, on s’occupe de tout ! Tous nos produits sont sélectionnés avec soin.",
   partner_logo: 'kawa.png',
@@ -277,8 +270,8 @@ Experience.create!(name: "Le meilleur du café livré chez vous",
 
 #Sport
 Experience.create!(name: "Un mois d'abonnement dans vos salles favorites de sport",
-  luma_price: '14,99',
-  public_price: '19,99',
+  price: '1499',
+  public_price: '19.99',
   validity_date: '31/12/19',
   description: "Un mois de training",
   partner_logo: 'gympass_logo.png',
@@ -288,7 +281,7 @@ Experience.create!(name: "Un mois d'abonnement dans vos salles favorites de spor
 )
 
 Experience.create!(name: "Une session pour le sport de votre choix avec un coach",
-  luma_price: '20',
+  price: '20',
   public_price: '40',
   validity_date: '31/12/19',
   description: "Bénéficiez d'une séance de sport d'1h avec un coach personnel!",
