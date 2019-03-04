@@ -50,6 +50,7 @@ Experience.create!(name: "Une année avec les meilleurs films",
   partner_logo: 'mubi_logo.png',
   category: cinema,
   partner_name: 'Mubi',
+  partner_description: " Chaque jour, notre équipe de cinéphiles vous présente un film qu'elle adore, et vous disposez d'un mois pour le voir. Soit en permanence 30 fabuleux films à découvrir.",
   photo_experience: 'mubi_xp.png',
 )
 
@@ -75,7 +76,7 @@ A vous de trouver les indices cachés dans la salle et de résoudre ensemble les
   partner_logo: 'hinthunt_logo.png',
   category: jeux,
   partner_name: 'HintHunt',
-  photo_experience: 'HintHunt_xp.jpg',
+  photo_experience: 'hinthunt_xp.jpg',
 )
 
 Experience.create!(name: 'Une expérience unique de Réalité Virtuelle',

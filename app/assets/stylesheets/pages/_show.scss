@@ -1,85 +1,161 @@
 .wrapper-1 {
 	width: 100%;
-  height: 100vh;
+  height: calc(100vh - 130px);
 	margin: 0 auto 0;
 	padding:30px;
-	display: flex;
-	flex-direction: row;
 	background-color: white;
-	justify-content: center;
-	align-items: flex-start;
-	flex-wrap: wrap;
 }
 
-.show-image {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: flex-start;
-	margin-right: 50px;
-	position:relative;
-	left: -30px;
-    top: 30px;
-
-	.experience-info {
-		flex-basis: 66%;
-		padding: 30px 0;
-		margin-top: -30px;
-
-	}
-
-	.img-xp {
-		overflow: hidden;
-		width:400px;
-		height:300px;
-		border-radius: 1px;
-		img {
-			width: 100%;
-		}
-	}
+.container {
+  margin-top: 30px;
 }
 
-	.price-container-show {
-		top: 15px;
-		right: 15px;
-		position: absolute !important;
-		h3, h4 {
-			color: white;
-			font-weight: normal;
-			font-size: 25px;
-			margin: 0;
-		}
+.experience-card-show {
+  margin-right: 20px;
+  margin-left: 20px;
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.15);
+}
 
-		h4 {
-			font-size: 18px;
-			text-decoration: line-through;
-		}
-	}
+.img-xp {
+  width:100%;
+  img {
+    width: 100%;
+    border-radius: 3px 3px 0px 0px;
+  }
+}
 
+.experience-infos-show {
+  padding: 30px;
+}
 
-	.partner {
-		display:flex;
-		flex-direction: row;
-		position: relative;
-	    top: -30px;
-		h2 {
-			color: $dark-blue;
-			font-size: 16px;
-			padding-right: 20px;
-		}
-	}
+.experience-infos-show h2 {
+  color: $dark-blue;
+  font-size: 32px;
+  margin-top: 0px;
+}
 
+.experience-infos-show p {
+  margin-top: 0px;
+  color: $dark-gray;
+  font-size: 18px;
+  text-align: justify;
+}
 
-	.experience-info h2 {
-		font-size: 30px;
-		color: $dark-blue;
-		font-style: bold;
-	}
+.experiences-text-show {
+  padding-bottom: 15px;
+}
 
-	.experience-info p {
-		font-size: 14px;
-		line-height: 21px;
-		color: $dark-gray;
-		text-align: justify;
-		 width: 750px;
-	}
+.experience-details-show {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.validity_date {
+    color: $dark-blue;
+  .fas {
+    padding-right: 20px;
+  }
+}
+
+ .price-container-show img {
+  padding: 0px 0px 0px 10px;
+ }
+
+ .price-container-show p {
+    padding: 0px 10px;
+    margin: 0px;
+    color: $dark-gray;
+    font-weight: normal;
+    font-family: $body-font;
+}
+
+#public-price {
+  color: $dark-blue;
+  padding-right: 5px;
+}
+.prix-luma p {
+  font-size: 20px;
+}
+
+.prix-public {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.partner {
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.15);
+}
+
+.partner-title {
+  height: 75px;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-blue;
+  border-radius: 3px 3px 0px 0px;
+  h2 {
+    padding: 0px;
+    margin: 5px;
+    font-size: 24px;
+    color: white;
+  }
+}
+
+.partner-name {
+  margin: 15px 10px 10px 10px;
+  text-align: center;
+  h3 {
+    margin: 0px;
+  }
+}
+
+.partner-description {
+    padding: 10px 30px 15px 30px;
+    line-height: 23px;
+    text-align: justify;
+    font-size: 14px;
+  p {
+    color: $dark-gray;
+  }
+}
+
+#plus-d-infos {
+  text-align: center !important;
+  font-size: 14px;
+  cursor: pointer;
+  padding-left: 35%;
+  color: $dark-blue;
+  &:hover {
+    text-decoration: none;
+    color: $light-blue;
+  }
+}
+
+.show-image-logo-partner {
+  width: 100%;
+  padding: 20px 20px 25px 20px;
+  text-align: center;
+  img {
+    width: 60%;
+  }
+}
+
+.payer {
+  width: 100%;
+  height: 75px;
+  text-align: center;
+  display: block;
+  padding: 15px;
+  background: $light-blue;
+  text-decoration: none;
+  transition: $transition;
+  color: white;
+  font-size: 18px;
+  bottom: 0px;
+  padding-top: 27px;
+
+  &:hover {
+    background: $dark-blue;
+    text-decoration: none;
+    color: white;
+  }
+}
