@@ -11,7 +11,7 @@
 		</div>
 
 		<div class="price-container-show">
-			<h3 class="price-after"><%= @experience.luma_price.to_i %>€</h3>
+			<h3 class="price-after"><h3>Amount: <%= humanized_money_with_symbol(@experience.price) %></h3>
 			<h4 class="price-before"><%= @experience.public_price.to_i %>€</h4>
 		</div>
 
@@ -27,13 +27,10 @@
     <br>
 		<p> <%= @experience.description %></p>
 
-		<div class="e-button-show">
-			<button class="btn-show">
-				<span class="text">
-						Je réserve !
-				</span>
-			</button>
-		</div>
+		<%= form_tag orders_path do %>
+  <%= hidden_field_tag 'experience_id', @experience.id %>
+  <%= submit_tag 'Je réserve', class: 'btn btn-primary' %>
+<% end %>
 
 	</div>
   <!-- </div>

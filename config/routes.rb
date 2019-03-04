@@ -5,10 +5,14 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :posts, only: [:new, :create]
   resources :experiences, only: [:index, :show] do
-    resources :orders, only: [:create, :show] # see doc on shallow
+    resources :orders, only: [:show, :create] # see doc on shallow
   end
   # resources :orders, only: [:index]
   resources :users, only: [:new]
+
+  resources :orders, only: [:show, :create] do
+  resources :payments, only: [:new, :create]
+end
 
   get 'dashboard', to: 'orders#dashboard'
 end
