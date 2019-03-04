@@ -58,7 +58,11 @@
             <%= image_tag @experience.partner_logo %>
           </div>
           </div>
-            <a class="payer" href="">Profiter de l'avantage</a>
+           <script src="stripe.js" <a class="payer" href="">Profiter de l'avantage</a>
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-name= "Mon avantage"
+    data-email="<%= current_user.email %>"
+           </script>
           </div>
         </div>
 
