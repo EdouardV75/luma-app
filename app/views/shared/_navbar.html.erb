@@ -29,6 +29,7 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
       <!-- Links when logged in -->
       <% if current_user.office_manager %>
+        <%= link_to "Mes avantages", experiences_path, class: "navbar-wagon-item navbar-wagon-link" %>
         <%= link_to "Mon dashboard", dashboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <% end %>
       <!-- Avatar with dropdown menu -->

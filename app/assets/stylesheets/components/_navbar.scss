@@ -11,11 +11,12 @@
 }
 
 .navbar-wagon-white {
-  background-color: white;
-  a {
+  background-color: white; 
+}
+
+.navbar-wagon-white a {
     color:$dark-blue;
   }
-}
 
 /* Logo */
 .navbar-wagon-brand img {
@@ -74,8 +75,8 @@
 }
 .navbar-wagon-dropdown-menu:before {
   content: ' ';
-  height: 10px;
-  width: 10px;
+  height: 13px;
+  width: 13px;
   position: absolute;
   right: 10px;
   top: -6px;
