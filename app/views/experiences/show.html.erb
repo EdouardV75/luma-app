@@ -44,31 +44,34 @@
       <div class="col-sm-12 col-lg-4">
 
         <div class="partner">
+
           <div class="partner-title flex">
             <h2>Notre partenaire</h2>
           </div>
+
           <div class="partner-name">
             <h3><%= @experience.partner_name %></h3>
           </div>
+
           <div class="partner-description">
             <p><%= @experience.partner_description %></p>
             <span id="plus-d-infos">plus d'infos</span>
           </div>
+
           <div class="show-image-logo-partner">
             <%= image_tag @experience.partner_logo %>
           </div>
-          </div>
-            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-name= "Mon avantage"
-    data-email="<%= current_user.email %>"
-    </script>
+
+          <div>
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-name="Mon avantage"
+                data-email="<%= current_user.email %>"
+                 data-label="Profiter de cet avantage"></script>
           </div>
         </div>
-
       </div>
 
     </div>
-
   </div>
 </div>
