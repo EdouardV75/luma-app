@@ -35,6 +35,7 @@ $cardHeight: auto;
   transform: scale(0.95);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.03);
   margin-bottom: 30px;
+
 }
 
 .filtered-out {
@@ -129,25 +130,26 @@ $cardHeight: auto;
     margin-top: 10px;
     color: $gray;
     padding: 31px 20px 15px 20px;
-    font-size: 16px;
+    font-size: 12px;
     transition: $transition;
     transform: translateY(20px);
 
     p {
-      line-height: 1.3;
       padding-right: 5px;
       color: $gray;
+      font-size:12px;
     }
 
     .experience-infos  i {
       margin-right: 10px;
-      font-size: 16px;
+      font-size: 12px;
       margin-top: 5px;
     }
   }
 
   .desc .experience-infos p, i {
    color: $dark-gray;
+
   }
 
   .rating {
@@ -224,7 +226,7 @@ $cardHeight: auto;
     &:after {
       width: 85%;
       transform: translateX(-20px);
-      transition-delay: 0.3s;
+      transition-delay: 0.2s;
       transition: transform 0.3s ease, width 3s ease-in;
     }
 

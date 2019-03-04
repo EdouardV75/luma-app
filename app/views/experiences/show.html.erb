@@ -21,7 +21,7 @@
             <div class="experience-details-show flex">
               <div class="validity_date flex">
                 <i class="fas fa-calendar-alt"></i>
-                <%= @experience.validity_date %>
+                <%= @experience.validity_date.strftime("%d/%m") %>
               </div>
               <div class="price-container-show flex">
                 <div class="prix-public flex">
