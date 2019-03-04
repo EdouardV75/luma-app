@@ -43,7 +43,7 @@ $cardHeight: auto;
 
 .card-image {
   position: absolute;
-  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);
+  // background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);
   background-size: cover;
   background-position: center center;
   width: 100%;
@@ -90,7 +90,7 @@ $cardHeight: auto;
   transform: translateY(188px);
 
   .title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     position: relative;
     color: white;
@@ -112,6 +112,7 @@ $cardHeight: auto;
       background: $light-blue;
       z-index: 100;
       transition: $transition;
+
     }
   }
 
@@ -216,6 +217,7 @@ $cardHeight: auto;
   .title {
     padding-bottom: 10px;
     transform: translateY(33px) translateX(10px);
+    font-size:16px;
 
     &:after {
       width: 85%;
@@ -280,7 +282,7 @@ $cardHeight: auto;
     color: white;
     font-weight: normal;
     font-size: 25px;
-    opacity: 0.9;
+    opacity: 1;
     margin-top: 0;
     margin-bottom: 3px;
   }
@@ -292,6 +294,7 @@ $cardHeight: auto;
   opacity: 1;
   margin-top: 0;
   text-decoration: line-through;
+  text-align: right;
   }
 }
 
