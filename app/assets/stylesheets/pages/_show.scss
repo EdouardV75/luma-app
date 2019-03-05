@@ -237,3 +237,35 @@
     color: white;
   }
 }
+
+.stripe {
+  height: 60px;
+  border-radius: 0px 0px 5px 5px !important;
+  &:hover button.stripe-button-el span {
+    color: $light-blue;
+  }
+}
+
+button.stripe-button-el {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  background-image: $dark-blue !important;
+  border-radius: 0px !important;
+  padding: 0px !important;
+  border-radius: 0px 0px 3px 3px !important;
+
+}
+
+button.stripe-button-el span {
+  width: 100% !important;
+  height: 100% !important;
+  background-image: $dark-blue !important;
+  background: $dark-blue !important;
+  border-radius: 0px 0px 3px 3px !important;
+  border: none !important;
+  height: 40px;
+  font-family: $body-font;
+  font-size: 18px;
+  padding-top: 15px;
+}

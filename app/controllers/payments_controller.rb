@@ -21,11 +21,10 @@ class PaymentsController < ApplicationController
 
     @order.update(payment: charge.to_json, state: 'paid')
     redirect_to order_path(@order)
-
+    
     rescue Stripe::CardError => e
       flash[:alert] = e.message
       redirect_to order_path(@order)
-
   end
 
 private

@@ -69,18 +69,15 @@
 
           <div class="validity-title flex">
             <i class="fas fa-calendar-alt"></i>
-            <p>Jusqu'au <%= @experience.validity_date %></p>
+            <p>Jusqu'au <%= @experience.validity_date.strftime("%d %B %Y")%></p>
           </div>
-
         </div>
-
-
           <div class="stripe">
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                 data-name="Mon avantage"
                 data-email="<%= current_user.email %>"
-                 data-label="Profiter de cet avantage"></script>
+                 data-label="Bénéficier de cet avantage"></script>
           </div>
         </div>
       </div>

@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new, :create]
 
- def new
+  def new
+    @user = current_user
     @post = Post.new
     authorize @post
   end
