@@ -266,7 +266,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootsnap
-  bootstrap-sass (~> 3.3)
+  bootstrap-sass (~> 3.4.1)
   cloudinary (~> 1.9.1)
   devise
   devise_invitable (~> 2.0.0)

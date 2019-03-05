@@ -1,10 +1,11 @@
 <%= render 'shared/navbar-categories' %>
 
+<div class="wrapper-1" style="background: linear-gradient(#008B8B, #163487)">
+
 <% content_for :meta_title, "#{@experience.name} is on #{DEFAULT_META["meta_product_name"]}" %>
 <% content_for :meta_description, @experience.description %>
 <% content_for :meta_image, cl_image_path(@experience.photo_experience) %>
 
-<div class="wrapper-1">
   <div class="container">
     <div class="row">
 
@@ -16,29 +17,25 @@
             <%= image_tag @experience.photo_experience; %>
           </div>
 
-          <div class="experience-infos-show">
-            <div class="experiences-text-show">
-              <h2><%= @experience.name %></h2>
-              <p> <%= @experience.description %></p>
+          <div class="partner flex">
+            <div class="partner-infos">
+              <div class="partner-name">
+                <h2>Notre partenaire</h2>
+
+              </div>
+
+              <div class="partner-description">
+                <p><%= @experience.description %></p>
+              </div>
             </div>
 
-            <div class="experience-details-show flex">
-              <div class="validity_date flex">
-                <i class="fas fa-calendar-alt"></i>
-                <%= @experience.validity_date.strftime("%d/%m") %>
-              </div>
-              <div class="price-container-show flex">
-                <div class="prix-public flex">
-                  <p id="public-price">Prix public</p>
-                  <p><%= @experience.public_price.to_i %>€</p>
-                </div>
-                <div class="prix-luma flex">
-                  <%= image_tag "logo_luma.svg", height: 25 %>
-                  <p><%= humanized_money(@experience.price) %>€</p>
-                </div>
-              </div>
+            <div class="show-image-logo-partner">
+              <%= image_tag @experience.partner_logo %>
+              <span id="plus-d-infos">plus d'infos</span>
             </div>
+
           </div>
+
         </div>
 
       </div>
@@ -47,31 +44,41 @@
 
       <div class="col-sm-12 col-lg-4">
 
-        <div class="partner">
+        <div class="experience">
 
-          <div class="partner-title flex">
-            <h2>Notre partenaire</h2>
-          </div>
+          <div class="experience-details-show">
 
-          <div class="partner-name">
-            <h3><%= @experience.partner_name %></h3>
-          </div>
-
-          <div class="partner-description">
-            <p><%= @experience.partner_description %></p>
-            <span id="plus-d-infos">plus d'infos</span>
-          </div>
-
-          <div class="show-image-logo-partner">
-            <%= image_tag @experience.partner_logo %>
-          </div>
-            <div class="stripe">
-                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                  data-name="Mon avantage"
-                  data-email="<%= current_user.email %>"
-                   data-label="Profiter de cet avantage"></script>
+            <div class="price-container-show flex">
+              <div class="graphic"></div>
+              <div class="prix-public">
+                <p class="price"><%= @experience.public_price.to_i %>€</p>
+                <p id="prix-public">Prix public</p>
+              </div>
+              <div class="prix-luma ">
+                <p class="price"><%= humanized_money(@experience.price) %>€</p>
+                <%= image_tag "logo_luma_white.png", height: 20 %>
+              </div>
             </div>
+          </div>
+
+          <div class="experience-infos-show">
+            <div class="experiences-text-show">
+              <h2><%= @experience.name %></h2>
+              <p> <%= @experience.description %></p>
+            </div>
+
+          <div class="validity-title flex">
+            <i class="fas fa-calendar-alt"></i>
+            <p>Jusqu'au <%= @experience.validity_date.strftime("%d %B %Y")%></p>
+          </div>
+        </div>
+          <div class="stripe">
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-name="Mon avantage"
+                data-email="<%= current_user.email %>"
+                 data-label="Bénéficier de cet avantage"></script>
+          </div>
         </div>
       </div>
 
