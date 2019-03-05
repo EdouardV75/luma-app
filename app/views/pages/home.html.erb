@@ -7,13 +7,25 @@
           <p>
             <span id="banner-typed-text"></span>
           </p>
-          <div class="e-button">
-						<button class="btn-home">
-							<span class="text">
-                    <a href="http://eepurl.com/gjuvFn">Demander une démo</a>
-							</span>
-						</button>
-					</div>
+
+          <a href="#" class="btn-home" data-toggle="modal" data-target="#luma-opt-in" style="
+    padding-top: 23px;">Demander une démo</a>
+          <!-- Button trigger modal -->
+
+          <!-- Modal -->
+          <div class="modal fade" id="luma-opt-in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Get your demo now</h4>
+                </div>
+                <div class="modal-body">
+                  <%= render "shared/mailchimp_opt_in_form" %>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
   </div>
