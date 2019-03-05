@@ -71,10 +71,7 @@
             <i class="fas fa-calendar-alt"></i>
             <p>Jusqu'au <%= @experience.validity_date.strftime("%d %B %Y")%></p>
           </div>
-
         </div>
-
-
           <div class="stripe">
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"

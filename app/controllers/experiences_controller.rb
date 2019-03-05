@@ -1,5 +1,7 @@
 class ExperiencesController < ApplicationController
+  
   def index
+    
     if params[:query].present?
       @experiences = Experience.global_search(params[:query])
     elsif params[:category].present?
@@ -8,10 +10,24 @@ class ExperiencesController < ApplicationController
     else
       @experiences = Experience.all
     end
+
+    if current_user.posts.present?
+      @user_preferences = PostCategory.where(post_id: current_user.posts.last.id)
+      currentuser_preferences = []
+      @user_preferences.each do |pc|
+        currentuser_preferences << pc.category.id
+      end
+    if @user_preferences.present?
+      @experiences = Experience.where(category_id: currentuser_preferences)
+      @experiences += Experience.all
+      @experiences = @experiences.uniq
+    end
+  end
   end
 
   def show
     @experience = Experience.find(params[:id])
+    @order = Order.new
     authorize @experience
   end
 
