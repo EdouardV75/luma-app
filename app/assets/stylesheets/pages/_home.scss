@@ -242,7 +242,8 @@ $prefixes : ('webkit','moz','ms','o');
 .features__list{
   list-style:none;
   display:block;
-  margin:20px auto;
+  margin: 5px;
+  padding-bottom: 10px;
   width:80%;
   li{
     color: white;

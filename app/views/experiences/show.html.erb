@@ -65,14 +65,13 @@
           <div class="show-image-logo-partner">
             <%= image_tag @experience.partner_logo %>
           </div>
-
-          <div class="stripe">
-              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                data-name="Mon avantage"
-                data-email="<%= current_user.email %>"
-                 data-label="Profiter de cet avantage"></script>
-          </div>
+            <div class="stripe">
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-name="Mon avantage"
+                  data-email="<%= current_user.email %>"
+                   data-label="Profiter de cet avantage"></script>
+            </div>
         </div>
       </div>
 
