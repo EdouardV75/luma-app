@@ -19,6 +19,10 @@
   margin-bottom: 0px;
   border-radius: 10px 10px;
   margin: 0px 5px;
+    &:hover {
+    cursor: pointer;
+    background-color:#64baa5;
+  }
 }
 
 .tabs li.active {
@@ -42,4 +46,10 @@
 
 ul.tabs.flex {
   padding: 0px;
+}
+
+.tab-un-dashboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -14,8 +14,47 @@
 
     <div class="row">
       <div class="tab-un-dashboard tab-content-center">
-        <p> Work in progress ...</p>
-        <%= image_tag("dashboard_cut.png") %>
+        <div class="grid-dashboard">
+          <div class="dashboard-last-employee dash-card-white">
+            <div class="dash-card-content">
+              <p>Dernier employé inscrit</p>
+              <br>
+              <%= image_tag("Alex.jpg", class: "img-circle", height: '80') %>
+              <h2>Alexandre Cousin</h2>
+              <p>CTO</p>
+            </div>
+          </div>
+          <div class="dashboard-info dash-card-white">
+            <div class="dash-card-content">
+              <p>Abonné Standard depuis</p>
+              <p class="dash-number">192 jours</p>
+            </div>
+          </div>
+          <div class="dashboard-info dash-card-white">
+            <div class="dash-card-content">
+              <p>Economie totale réalisée</p>
+              <p class="dash-number">40 200€</p>
+            </div>
+          </div>
+          <div class="dashboard-info dash-card-white">
+            <div class="dash-card-content">
+              <p>Nombre d'avantages</p>
+              <p class="dash-number">1 857</p>
+            </div>
+          </div>
+          <div class="dashboard-graph dash-card-white">
+            <div class="dash-card-content">
+              <p>Consommation d'avantages</p>
+              <%= image_tag("dashboard_graph.svg", height: '200') %>
+            </div>
+          </div>
+          <div class="dashboard-circle dash-card-white">
+            <div class="dash-card-content">
+              <p>Les plus consommés</p>
+              <%= image_tag("dashboard_circle.svg", height: '200') %>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -56,23 +95,23 @@
         </tbody>
       </table>
 
-      </div>
     </div>
+  </div>
 
-    <div class="row">
-      <div class="tab-trois-invite hidden tab-content-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
-              <div class="form-invitation">
-                <h2>Inviter</h2>
-                <%= render 'new_invitation', user: @user_to_create %>
-              </div>
+  <div class="row">
+    <div class="tab-trois-invite hidden tab-content-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+            <div class="form-invitation">
+              <h2>Inviter</h2>
+              <%= render 'new_invitation', user: @user_to_create %>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
+
+</div>
 </div>
