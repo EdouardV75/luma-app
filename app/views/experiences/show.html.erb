@@ -1,6 +1,6 @@
 <%= render 'shared/navbar-categories' %>
 
-<div class="wrapper-1">
+<div class="wrapper-1" style="background-image:  linear-gradient(-180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a625a116932335.5633bc6dae0f6.jpg');">
   <div class="container">
     <div class="row">
 
@@ -43,13 +43,14 @@
           <div class="experience-details-show">
 
             <div class="price-container-show flex">
-              <div class="prix-public flex">
-                <p id="public-price">Prix public</p>
-                <p><%= @experience.public_price.to_i %>€</p>
+              <div class="graphic"></div>
+              <div class="prix-public">
+                <p class="price"><%= @experience.public_price.to_i %>€</p>
+                <p id="prix-public">Prix public</p>
               </div>
-              <div class="prix-luma flex">
-                <%= image_tag "logo_luma.svg", height: 25 %>
-                <p><%= humanized_money(@experience.price) %>€</p>
+              <div class="prix-luma ">
+                <p class="price"><%= humanized_money(@experience.price) %>€</p>
+                <%= image_tag "logo_luma_white.png", height: 20 %>
               </div>
             </div>
           </div>
@@ -59,12 +60,13 @@
               <h2><%= @experience.name %></h2>
               <p> <%= @experience.description %></p>
             </div>
-          </div>
 
           <div class="validity-title flex">
-            <h2>Jusqu'au <%= @experience.validity_date %></h2>
+            <i class="fas fa-calendar-alt"></i>
+            <p>Jusqu'au <%= @experience.validity_date %></p>
           </div>
 
+        </div>
 
 
           <div class="stripe">

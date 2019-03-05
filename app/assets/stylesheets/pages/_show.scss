@@ -2,7 +2,9 @@
 	width: 100%;
 	margin: 0 auto 0;
 	padding:30px;
-	background-color: white;
+	background-size: cover;
+  height: calc(100vh - 130px);
+  background-position: center;
 }
 
 .container {
@@ -15,23 +17,27 @@
   margin-right: 20px;
   margin-left: 20px;
   box-shadow: 0 5px 15px -5px rgba(0,0,0,0.15);
+  background-color: white;
+  border-radius: 0px 0px 3px 3px;
 }
 
 .img-xp {
   width:100%;
   img {
     width: 100%;
-    border-radius: 3px 3px 0px 0px;
+    border-radius: 3px 3px 3px 3px;
   }
 }
 
 .partner {
   box-shadow: 0 5px 15px -5px rgba(0,0,0,0.15);
   padding: 30px;
+
 }
 
 .partner-infos {
   margin-right: 30px;
+  margin-left: 5px;
 }
 
 .partner-name {
@@ -79,6 +85,9 @@
 
 .experience {
   box-shadow: 0 5px 15px -5px rgba(0,0,0,0.15);
+  background: white;
+  border-radius: 0px 0px 3px 3px;
+
 }
 
 .experience-details-show {
@@ -86,24 +95,84 @@
   align-items: center;
   background-color: $dark-blue;
   color: white;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.price-container-show {
+  position: relative;
+  font-family: $headers-font;
+}
+
+.graphic {
+  margin-top: 0px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  background-color: $dark-blue;
+  border-radius: 3px 3px 0px 0px;
+
+}
+
+.graphic:before {
+    content: '';
+    position: absolute;
+    left: -9%;
+    width: 200px;
+    height: 200Px;
+    background-color: $gray; /* fallback */
+    background-color: $gray;
+    top: -49px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-radius: 60px;
+}
+
+
+.prix-public {
+  position: absolute;
+  text-align: center;
+  left: 35px;
+  top: 20px;
+  p {
+    color: white;
+    font-weight: bold;
+    margin: 0px;
+    padding-bottom: 10px
+
+  }
+}
+
+#prix-public {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.prix-luma {
+  position: absolute;
+  text-align: center;
+  right: 50px;
+  top: 20px;
+  p {
+  color: white;
+  font-weight: bold;
+  margin: 0px;
+  padding-bottom: 10px
+ }
+}
+
+.price {
+  font-style: bold;
+  font-size: 20px;
 }
 
 .experience-infos-show {
   padding: 30px;
 }
 
-.price-container-show {
-  margin-top: 0px;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  border-radius: 3px 3px 0px 0px;
-  p {
-    color: white;
-    font-size: 28px;
-    margin: 0px;
-  }
-}
 
 .experience-infos-show h2 {
   color: $dark-blue;
@@ -135,40 +204,17 @@
     color: $dark-gray;
 }
 
-.validity_date {
+.validity-title p {
     color: $dark-blue;
-  .fas {
+}
+.validity-title .fas {
+    color: $dark-blue;
     padding-right: 20px;
   }
-}
 
  .price-container-show img {
-  padding: 0px 0px 0px 10px;
+  padding: 0px;
  }
-
-
-
- .price-container-show p {
-    padding: 0px 10px;
-    margin: 0px;
-    color: $dark-gray;
-    font-weight: normal;
-    font-family: $body-font;
-}
-
-#public-price {
-  color: $dark-blue;
-  padding-right: 5px;
-}
-.prix-luma p {
-  font-size: 20px;
-}
-
-
-.prix-public {
-  margin-right: 10px;
-  font-size: 16px;
-}
 
 
 .payer {
