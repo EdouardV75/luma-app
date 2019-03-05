@@ -97,7 +97,7 @@ Ce baptême du feu ne sera pas de tout repos, mais il ne sera que la première �
 Experience.create!(name: "Un séjour inoubliable",
   price: '350',
   public_price: '500',
-  validity_date: '2019-12-31'
+  validity_date: '2019-12-31',
   description: "Choisissez parmi plus de 600 destinations avec notre partenaire",
   partner_logo: 'evaneos_logo.png',
   category: voyages,
@@ -233,7 +233,6 @@ Experience.create!(name: "Une box 6 spectacles",
 
 # #Gastronomie
 Experience.create!(name: "Mon panier de fruits et légumes",
-  price: '20',
   price: '20',
   public_price: '30',
   validity_date: '2019-12-31',
