@@ -1,0 +1,17 @@
+.thead-luma-blue {
+  background-color: $dark-blue !important;
+  color: white !important;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: $gray !important;
+  color: white;
+}
+
+.table th {
+  text-align: center;
+}
+
+.table td {
+  font-size: 17px;
+}
