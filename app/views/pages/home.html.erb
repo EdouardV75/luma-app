@@ -7,13 +7,23 @@
           <p>
             <span id="banner-typed-text"></span>
           </p>
-          <div class="e-button">
-						<button class="btn-home">
-							<span class="text">
-										Je m'inscris !
-							</span>
-						</button>
-					</div>
+          <a href="#" class="btn-home" data-toggle="modal" data-target="#luma-opt-in" style="
+    padding-top: 23px;">Demander une démo</a>
+          <!-- Button trigger modal -->
+          <!-- Modal -->
+          <div class="modal fade" id="luma-opt-in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Obtenez une démo</h4>
+                </div>
+                <div class="modal-body">
+                  <%= render "shared/mailchimp_opt_in_form" %>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
   </div>
@@ -92,9 +102,21 @@
           Avantages inclus
         </li>
       </ul>
-    <button class="order__button">
-      S'inscrire
-    </button>
+        <a href="#" class="order__button" data-toggle="modal" data-target="#luma-opt-in"style="
+    padding-left: 50px;padding-top: 5px;">S'inscrire</a>
+          <div class="modal fade" id="luma-opt-in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Obtenez une démo</h4>
+                </div>
+                <div class="modal-body">
+                  <%= render "shared/mailchimp_opt_in_form" %>
+                </div>
+              </div>
+            </div>
+          </div>
   </div>
 
   <div class="pricing__table">
@@ -128,9 +150,21 @@
           Avantages inclus
         </li>
       </ul>
-    <button class="order__button">
-      S'inscrire
-    </button>
+    <a href="#" class="order__button" data-toggle="modal" data-target="#luma-opt-in"style="
+    padding-left: 50px;padding-top: 5px;">S'inscrire</a>
+          <div class="modal fade" id="luma-opt-in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Obtenez une démo</h4>
+                </div>
+                <div class="modal-body">
+                  <%= render "shared/mailchimp_opt_in_form" %>
+                </div>
+              </div>
+            </div>
+          </div>
   </div>
 
 
@@ -165,9 +199,21 @@
           3 avantages inclus
         </li>
       </ul>
-      <button class="order__button">
-      S'inscrire
-    </button>
+      <a href="#" class="order__button" data-toggle="modal" data-target="#luma-opt-in"style="
+    padding-left: 50px;padding-top: 5px;">S'inscrire</a>
+          <div class="modal fade" id="luma-opt-in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Obtenez une démo</h4>
+                </div>
+                <div class="modal-body">
+                  <%= render "shared/mailchimp_opt_in_form" %>
+                </div>
+              </div>
+            </div>
+          </div>
   </div>
 </div>
 </body>
