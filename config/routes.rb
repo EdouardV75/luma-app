@@ -15,4 +15,5 @@ Rails.application.routes.draw do
 end
 
   get 'dashboard', to: 'orders#dashboard'
+  get 'confirmed', to: 'orders#confirmed'
 end
