@@ -1,6 +1,11 @@
 <%= render 'shared/navbar-categories' %>
 
 <div class="wrapper-1" style="background-image:  linear-gradient(-180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a625a116932335.5633bc6dae0f6.jpg');">
+
+<% content_for :meta_title, "#{@experience.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @experience.description %>
+<% content_for :meta_image, cl_image_path(@experience.photo_experience) %>
+
   <div class="container">
     <div class="row">
 
@@ -16,6 +21,7 @@
             <div class="partner-infos">
               <div class="partner-name">
                 <h2>Notre partenaire</h2>
+
               </div>
 
               <div class="partner-description">

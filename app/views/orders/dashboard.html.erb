@@ -22,81 +22,57 @@
     <div class="row">
       <div class="tab-deux-collaborateurs hidden tab-content-center">
 
-        <div class="collaborateurs-wrapper">
 
-          <div class="collaborateurs-table">
+        <table class="table table-hover">
+          <thead class="thead-luma-blue">
+            <tr class="d-flex">
+              <th scope="col" style="width:30%">Nom</th>
+              <th scope="col" style="width:15%">Age</th>
+              <th scope="col" style="width:35%">Poste</th>
+              <th scope="col" style="width:25%">Ville</th>
+            </tr>
+          </thead>
+          <tbody>
+           <% @employees.each do |employee|%>
+           <tr>
+            <td>
+              <%= "#{employee.first_name.capitalize} #{employee.last_name.capitalize}" %>
+            </td>
+            <td>
+              <%= (22..43).to_a.sample %>
+            </td>
+            <td>
+              <% if employee.office_manager %>
+              <%= "Office Manager" %>
+              <% else %>
+              <%= ["Développeur Front-End", "Développeur Back-End", "Lead développeur", "Designer", "Product Manager", "Growth Hacker", "Account Manager", "Responsable Communication", "Community Manager", "Business Développeur", "Développeur Front-End", "Développeur Back-End","Product Manager", "Designer"].sample %>
+              <% end %>
+            </td>
+            <td>
+              Paris
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-            <div class="collaborateurs-row header">
-              <div class="collaborateurs-cell">
-                Name
-              </div>
-              <div class="collaborateurs-cell">
-                Age
-              </div>
-              <div class="collaborateurs-cell">
-                Occupation
-              </div>
-              <div class="collaborateurs-cell">
-                Location
-              </div>
-            </div>
-
-            <div class="collaborateurs-row">
-              <div class="collaborateurs-cell" data-title="Name">
-                Luke Peters
-              </div>
-              <div class="collaborateurs-cell" data-title="Age">
-                25
-              </div>
-              <div class="collaborateurs-cell" data-title="Occupation">
-                Freelance Web Developer
-              </div>
-              <div class="collaborateurs-cell" data-title="Location">
-                Brookline, MA
-              </div>
-            </div>
-
-            <% @employees.each do |employee|%>
-            <div class="collaborateurs-row">
-              <div class="collaborateurs-cell" data-title="Name">
-                <%= "#{employee.first_name.capitalize} #{employee.last_name.capitalize}" %>
-              </div>
-              <div class="collaborateurs-cell" data-title="Age">
-                <%= (22..43).to_a.sample %>
-              </div>
-              <div class="collaborateurs-cell" data-title="Occupation">
-                <% if employee.office_manager %>
-                <%= "Office Manager" %>
-                <% else %>
-                <%= ["Développeur Front-End", "Développeur Back-End", "Lead développeur", "Designer", "Product Manager", "Growth Hacker", "Account Manager", "Responsable Communication", "Community Manager", "Business Développeur", "Développeur Front-End", "Développeur Back-End","Product Manager", "Designer"].sample %>
-                <% end %>
-              </div>
-              <div class="collaborateurs-cell" data-title="Location">
-                Somerville, MA
-              </div>
-            </div>
-            <% end %>
-
-
-          </div>
-
-        </div>
       </div>
-
-      <div class="row">
-        <div class="tab-trois-invite hidden tab-content-center">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
-                <div class="form-invitation">
-                  <h2>Inviter</h2>
-                  <%= render 'new_invitation', user: @user_to_create %>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <div class="row">
+      <div class="tab-trois-invite hidden tab-content-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+              <div class="form-invitation">
+                <h2>Inviter</h2>
+                <%= render 'new_invitation', user: @user_to_create %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
+</div>
