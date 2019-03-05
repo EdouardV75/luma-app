@@ -69,7 +69,7 @@
 
           <div class="validity-title flex">
             <i class="fas fa-calendar-alt"></i>
-            <p>Jusqu'au <%= @experience.validity_date %></p>
+            <p>Jusqu'au <%= @experience.validity_date.strftime("%d %B %Y")%></p>
           </div>
 
         </div>
