@@ -29,16 +29,15 @@ user5 = User.create!(email: "florent.lienard@lewagon.org", password: "azerty", f
 
 puts 'Creating categories...'
 
-cinema = Category.create!(name: 'Cinéma')
-jeux = Category.create!(name: 'Jeux')
-voyages = Category.create!(name: 'Voyages')
-nature = Category.create!(name: 'Nature')
-beaute = Category.create!(name: 'Beauté')
-deco = Category.create!(name: 'Déco')
-presse = Category.create!(name: 'Presse')
-culture = Category.create!(name: 'Culture')
-gastronomie = Category.create!(name: 'Gastronomie')
-sport = Category.create!(name: 'Sport')
+cinema = Category.create!(name: 'Cinéma', emoji:'🎬')
+jeux = Category.create!(name: 'Jeux', emoji:'🎯')
+voyages = Category.create!(name: 'Voyages', emoji:'🗺')
+nature = Category.create!(name: 'Nature', emoji:'🌿')
+beaute = Category.create!(name: 'Beauté', emoji:'💅')
+deco = Category.create!(name: 'Déco', emoji: '🖼')
+culture = Category.create!(name: 'Culture', emoji: '🎭')
+gastronomie = Category.create!(name: 'Fooding', emoji:'👨‍🍳')
+sport = Category.create!(name: 'Sport', emoji: '🧗‍♀️')
 
 puts 'Creating experiences...'
 
@@ -197,16 +196,16 @@ Experience.create!(name: "Une photographie en édition limitée",
 )
 
 #Presse
-Experience.create!(name: "Un abonnement annuel pour Usbek & Rica",
-  price: '18',
-  public_price: '24',
-  validity_date: '2019-12-31',
-  description: "Trois numéros du magazine. Le magazine qui explore le futur. Tous les futurs : ceux qui nous font peur et ceux dont on rêve.",
-  partner_logo: 'usbekrica_logo.png',
-  category: presse,
-  partner_name: 'Usbek & Rica',
-  photo_experience: 'usbekrica_xp.jpg',
-)
+# Experience.create!(name: "Un abonnement annuel pour Usbek & Rica",
+#   price: '18',
+#   public_price: '24',
+#   validity_date: '2019-12-31',
+#   description: "Trois numéros du magazine. Le magazine qui explore le futur. Tous les futurs : ceux qui nous font peur et ceux dont on rêve.",
+#   partner_logo: 'usbekrica_logo.png',
+#   category: presse,
+#   partner_name: 'Usbek & Rica',
+#   photo_experience: 'usbekrica_xp.jpg',
+# )
 
 #Culture
 Experience.create!(name: "Le meilleur de la culture",
