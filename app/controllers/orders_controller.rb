@@ -32,6 +32,10 @@ class OrdersController < ApplicationController
     authorize @order
   end
 
+  def confirmed
+    @user = current_user
+    authorize @user
+  end
    # def edit
   #   @order = Order.find(params[:order_id])
   #   authorize @order

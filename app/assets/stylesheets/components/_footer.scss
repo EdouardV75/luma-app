@@ -4,7 +4,6 @@
   color: $light-pink;
   line-height: 1.8;
   font-size: 14px;
-  position: static;
 }
 
 .footer .footer-links-list {
@@ -32,4 +31,8 @@
 .footer-links-social-media i {
   padding-right: 20px;
   font-size: 16px;
+}
+
+.footer-content {
+  justify-content: center;
 }

@@ -6,13 +6,11 @@ Rails.application.routes.draw do
   resources :posts, only: [:new, :create]
   resources :experiences, only: [:index, :show] do
     resources :orders, only: [:show, :create] # see doc on shallow
+    resources :payments, only: [:create]
   end
   # resources :orders, only: [:index]
   resources :users, only: [:new]
 
-  resources :orders, only: [:show, :create] do
-  resources :payments, only: [:new, :create]
-end
-
   get 'dashboard', to: 'orders#dashboard'
+  get 'confirmed', to: 'orders#confirmed'
 end

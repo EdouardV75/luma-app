@@ -1,7 +1,7 @@
 .form-invitation {
   background: white;
   padding: 10px 20px;
-  margin-top: 120px;
+  margin-top: 80px;
   border-radius: 3px;
   box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
   padding-bottom: 30px;
@@ -14,7 +14,7 @@
     text-align: center;
     color: rgb(20,20,20);
   }
-  
+
 
 .btn {
     width: 100%;
@@ -23,12 +23,16 @@
     color: #FFFFFF;
     font-size: 12px;
     background-color: $dark-blue;
-    -webkit-box-shadow: 0px 11px 45px -10px rgb(0, 48, 134);
+    -webkit-box-shadow: 0px 1px 10px -10px rgb(0, 48, 134);
   }
 
   .btn:hover {
     color: white;
     cursor:pointer;
     transform:scale(1.03);
-      
   }
+
+.btn-18px {
+    font-size: 18px;
+    margin-top: 10px;
+}

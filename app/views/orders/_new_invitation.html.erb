@@ -9,11 +9,13 @@
   <%= f.input :first_name,
                 required: true,
                 autofocus: true,
+                placeholder: "Bob",
                 label: false %>
   <%= f.label :last_name, 'Nom' %>
   <%= f.input :last_name,
                 required: true,
                 autofocus: true,
+                placeholder: "Durant",
                 label: false %>
  <%= f.input :company_id,
                 required: true,
@@ -22,6 +24,6 @@
                 input_html: { value: current_user.company.id } %>
 
   <div class="form-actions">
-    <%= f.button :submit, t("devise.invitations.new.submit_button"), class: "btn btn-primary", value: "Envoyer une invitation"%>
+    <%= f.button :submit, t("devise.invitations.new.submit_button"), class: "btn btn-primary btn-18px", value: "Envoyer une invitation"%>
   </div>
 <% end %>

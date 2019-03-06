@@ -7,13 +7,11 @@ $cardHeight: auto;
   justify-content: space-between;
   font-family: $body-font;
   display: flex;
-  position: static;
-  min-height: calc(100vh - 130px);
   background-color: white;
 }
 
 .container-cards {
-  padding-top: 35px;
+  padding-top: 20px;
   margin-right: auto;
   margin-left: auto;
   width: 85%;
@@ -34,7 +32,7 @@ $cardHeight: auto;
   transition: $transition;
   transform: scale(0.95);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.03);
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 
 }
 
@@ -106,7 +104,7 @@ $cardHeight: auto;
     &:after {
       position: absolute;
       content: "";
-      bottom: -12px;
+      bottom: -20px;
       left: 10px;
       width: 60px;
       height: 3px;
@@ -119,9 +117,9 @@ $cardHeight: auto;
 
   .genre {
     color: $light-gray;
-    margin-top: 1.2rem;
+    margin-top: 1.3rem;
     padding-left: 10px;
-    font-size: 16px;
+    font-size: 15px;
     transition: $transition;
   }
 
@@ -224,10 +222,10 @@ $cardHeight: auto;
 
 
     &:after {
-      width: 85%;
+      width: 167%;
       transform: translateX(-20px);
       transition-delay: 0.2s;
-      transition: transform 0.3s ease, width 3s ease-in;
+      transition: transform 0.3s ease, width 1.5s ease-in;
     }
 
   }

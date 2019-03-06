@@ -14,8 +14,57 @@
 
     <div class="row">
       <div class="tab-un-dashboard tab-content-center">
-        <p> Work in progress ...</p>
-        <%= image_tag("dashboard_cut.png") %>
+        <div class="grid-dashboard">
+          <div class="dashboard-last-employee dash-card-white">
+            <div class="dash-card-content">
+              <%= image_tag("doctolib_logo.jpg", height: '70') %>
+              <br>
+              <br>
+              <br>
+              <p>Dernier collaborateur inscrit</p>
+              <br>
+              <% if User.last.email == "claire.doctolib@gmail.com" %>
+                <%= image_tag("claire.jpg", class: "img-circle", height: '80') %>
+                <h2>Claire Demont</h2>
+                <p>Développeur Full Stack</p>
+              <% else %>
+                <%= image_tag("Alex.jpg", class: "img-circle", height: '80') %>
+                <h2>Alexandre Cousin</h2>
+                <p>CTO</p>
+              <% end %>
+            </div>
+          </div>
+          <div class="dashboard-info dash-card-white">
+            <div class="dash-card-content">
+              <p class="dash-number">587</p>
+              <p>collaborateurs inscrits</p>
+            </div>
+          </div>
+          <div class="dashboard-info dash-card-white">
+            <div class="dash-card-content">
+              <p class="dash-number">40 200€</p>
+              <p>d'économies réalisées</p>
+            </div>
+          </div>
+          <div class="dashboard-info dash-card-white">
+            <div class="dash-card-content">
+              <p class="dash-number">1 857</p>
+              <p>Avantages réservés</p>
+            </div>
+          </div>
+          <div class="dashboard-graph dash-card-white">
+            <div class="dash-card-content">
+              <p>Consommation d'avantages</p>
+              <%= image_tag("dashboard_graph.svg", height: '200') %>
+            </div>
+          </div>
+          <div class="dashboard-circle dash-card-white">
+            <div class="dash-card-content">
+              <p>Les plus consommés</p>
+              <%= image_tag("dashboard_circle.svg", height: '200') %>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -56,23 +105,23 @@
         </tbody>
       </table>
 
-      </div>
     </div>
+  </div>
 
-    <div class="row">
-      <div class="tab-trois-invite hidden tab-content-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
-              <div class="form-invitation">
-                <h2>Inviter</h2>
-                <%= render 'new_invitation', user: @user_to_create %>
-              </div>
+  <div class="row">
+    <div class="tab-trois-invite hidden tab-content-center">
+      <div class="container" style="margin-top: 0;">
+        <div class="wrapper-form" style="background-image: linear-gradient(-225deg, rgba(0, 0, 0 , 1) 0%, rgba(0, 0, 0,0.2) 0%), url('http://www.catfinnie.co.uk/assets/img/portfolio/masonry/CatFinnie_WeekendSight.jpg');">
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+            <div class="form-invitation">
+              <h2>Inviter un collaborateur</h2>
+              <%= render 'new_invitation', user: @user_to_create %>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
+
+</div>
 </div>
