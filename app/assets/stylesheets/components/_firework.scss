@@ -1,7 +1,7 @@
 
-$particles: 50;
-$width: 500;
-$height: 500;
+$particles: 250;
+$width: 1000;
+$height: 1000;
 
 
 #wow-title {
@@ -81,8 +81,8 @@ $box-shadow2: ();
 
 .pyro > .before, .pyro > .after {
   position: absolute;
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   box-shadow: $box-shadow2;
   @include animation((1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards));

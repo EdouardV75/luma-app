@@ -249,7 +249,7 @@
 }
 
 .stripe {
-  height: 60px;
+  height: 45px;
   border-radius: 0px 0px 5px 5px !important;
   &:hover button.stripe-button-el span {
     color: $light-blue;
@@ -278,4 +278,5 @@ button.stripe-button-el span {
   font-family: $body-font;
   font-size: 18px;
   padding-top: 15px;
+  padding-bottom: 10px;
 }
