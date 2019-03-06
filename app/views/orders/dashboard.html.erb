@@ -17,12 +17,21 @@
         <div class="grid-dashboard">
           <div class="dashboard-last-employee dash-card-white">
             <div class="dash-card-content">
-              <p>Dernier employé inscrit</p>
+              <%= image_tag("doctolib_logo.jpg", height: '70') %>
               <br>
               <br>
-              <%= image_tag("Alex.jpg", class: "img-circle", height: '80') %>
-              <h2>Alexandre Cousin</h2>
-              <p>CTO</p>
+              <br>
+              <p>Dernier collaborateur inscrit</p>
+              <br>
+              <% if User.last.email == "claire.doctolib@gmail.com" %>
+                <%= image_tag("claire.jpg", class: "img-circle", height: '80') %>
+                <h2>Claire Demont</h2>
+                <p>Développeur Full Stack</p>
+              <% else %>
+                <%= image_tag("Alex.jpg", class: "img-circle", height: '80') %>
+                <h2>Alexandre Cousin</h2>
+                <p>CTO</p>
+              <% end %>
             </div>
           </div>
           <div class="dashboard-info dash-card-white">
