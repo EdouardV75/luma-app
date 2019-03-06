@@ -1,0 +1,45 @@
+#########################################################################################################
+# I18n French translation for Devise (http://github.com/plataformatec/devise)
+# I18n traduction de français pour Devise
+#
+# Note from author: I'm not a native French speaker. Please correct my French.
+# Note de l'autheur: Je ne parle pas beaucoup de français. Pourriez-vous corriger mon français,
+#                    s'il vous plait?
+#########################################################################################################
+
+fr:
+  errors:
+    messages:
+      not_found: "n'est pas trouvé(e)"
+      already_confirmed: "était déjà confirmé(e)"
+      not_locked: "n'était pas verrouillé(e)"
+
+  devise:
+    failure:
+      unauthenticated: "Il fault se connecter ou s'inscrire pour continuer."
+      unconfirmed: "Vous devez confirmer votre compte pour continuer."
+      locked: "Votre compte est verrouillé."
+      invalid: "Courriel ou mot de passe incorrect."
+      invalid_token: "Jeton de l'authentication incorrect."
+      timeout: "Votre séance est expiré, Veuillez vous reconnecter pour continuer."
+      inactive: "Votre compte n'était pas encore activé."
+    sessions:
+      signed_in: "Réussite de la connexion."
+      signed_out: "Réussite de la decnnexion."
+    passwords:
+      send_instructions: "Vous allez recevoir un courriel avec des instructions de comment changer votre mot de passe en quelque minutes."
+      updated: "Votre mot de passe est changé. Vous vous êtez connecté maintenant."
+    confirmations:
+      send_instructions: "Vous allez recevoir un courriel avec des instructions de comment confimer votre compte en quelque minutes."
+      confirmed: "Votre compte est confirmé. Vous vous êtez connecté maintenant."
+    registrations:
+      signed_up: "Vous avez réussit de vous inscrir. Si c'est activé, un courriel de la confirmation était envoyé."
+      updated: "Vous avez réussit de metter votre compte à jour."
+      destroyed: "Bye! Votre compte est annulé. Nous souhaiton de vous revoir bientôt."
+    unlocks:
+      send_instructions: "Vous allez recevoir un courriel avec des instructions de comment déverrouiller votre compte en quelque minutes."
+      unlocked: "Votre compte est déverrouillé. Vous vous êtez connecté maintenant."
+    mailer:
+      confirmation_instructions: "Instructions de la confirmation"
+      reset_password_instructions: "Instructions de changer le mot de passe"
+      unlock_instructions: "Instructions de déverrouiller le compte"
