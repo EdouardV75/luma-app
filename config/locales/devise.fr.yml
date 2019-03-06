@@ -16,11 +16,11 @@ fr:
 
   devise:
     failure:
-      unauthenticated: "Il fault se connecter ou s'inscrire pour continuer."
+      unauthenticated: "Il faut se connecter ou s'inscrire pour continuer."
       unconfirmed: "Vous devez confirmer votre compte pour continuer."
       locked: "Votre compte est verrouillé."
-      invalid: "Courriel ou mot de passe incorrect."
-      invalid_token: "Jeton de l'authentication incorrect."
+      invalid: "Email ou mot de passe incorrect."
+      invalid_token: "Jeton d'authentication incorrect."
       timeout: "Votre séance est expiré, Veuillez vous reconnecter pour continuer."
       inactive: "Votre compte n'était pas encore activé."
     sessions:
