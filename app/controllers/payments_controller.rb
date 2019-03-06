@@ -1,5 +1,5 @@
 class PaymentsController < ApplicationController
-  before_action :set_order
+  before_action :set_experience
 
   def new
     skip_authorization
@@ -9,27 +9,25 @@ class PaymentsController < ApplicationController
     skip_authorization
     customer = Stripe::Customer.create(
       source: params[:stripeToken],
-      email:  params[:stripeEmail]
+      email:  params[:stripeEmail],
     )
 
     charge = Stripe::Charge.create(
       customer:     customer.id,
-      amount:       @order.amount_cents,
-      description:  "Payment for experience #{@order.experience} for order #{@order.id}",
-      currency:     @order.amount.currency
+      amount:       @experience.price_cents,
+      description:  "Payment for experience #{@experience.name} for order #{@experience.id}",
+      currency:     'eur',
+      
     )
-
-    @order.update(payment: charge.to_json, state: 'paid')
     redirect_to confirmed_path
-    
-    rescue Stripe::CardError => e
-      flash[:alert] = e.message
-      redirect_to order_path(@order)
+  rescue Stripe::CardError => e
+    flash[:alert] = e.message
+    redirect_to order_path(@order)
   end
 
-private
+  private
 
-  def set_order
-    @order = current_user.orders.where(state: 'pending').find(params[:order_id])
+  def set_experience
+    @experience = Experience.find(params[:experience_id])
   end
 end
