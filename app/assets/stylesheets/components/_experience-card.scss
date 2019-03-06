@@ -8,6 +8,7 @@ $cardHeight: auto;
   font-family: $body-font;
   display: flex;
   background-color: white;
+  padding-bottom: 40px;
 }
 
 .container-cards {
@@ -94,7 +95,7 @@ $cardHeight: auto;
     position: relative;
     color: white;
     // padding-bottom: 0.4rem;
-    padding-left: 10px;
+    padding-left: 15px;
     z-index: 200;
     transition: $transition;
     margin-top: 15px;
@@ -104,9 +105,9 @@ $cardHeight: auto;
     &:after {
       position: absolute;
       content: "";
-      bottom: -20px;
+      bottom: -13px;
       left: 10px;
-      width: 60px;
+      width: 0px;
       height: 3px;
       background: $light-blue;
       z-index: 100;
@@ -117,8 +118,8 @@ $cardHeight: auto;
 
   .genre {
     color: $light-gray;
-    margin-top: 1.3rem;
-    padding-left: 10px;
+    margin-top: 0.6rem;
+    padding-left: 17px;
     font-size: 15px;
     transition: $transition;
   }
