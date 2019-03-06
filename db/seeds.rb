@@ -52,7 +52,7 @@ Experience.create!(name: "Une année avec les meilleurs films",
   category: cinema,
   partner_name: 'Mubi',
   partner_description: " Chaque jour, notre équipe de cinéphiles vous présente un film qu'elle adore, et vous disposez d'un mois pour le voir. Soit en permanence 30 fabuleux films à découvrir.",
-  photo_experience: 'mubi_xp.png',
+  photo_experience: 'mubi_xp.jpg',
 )
 
 Experience.create!(name: "Un pass de 10 places de cinéma",
