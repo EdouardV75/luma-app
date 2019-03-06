@@ -7,8 +7,12 @@
           <p>
             <span id="banner-typed-text"></span>
           </p>
+          <% if current_user %>
+          <a href="#" class="hidden" class="btn-home" data-toggle="modal" data-target="#luma-opt-in" style="padding-top: 23px;">Demander une démo</a>
+          <% else %>
           <a href="#" class="btn-home" data-toggle="modal" data-target="#luma-opt-in" style="
     padding-top: 23px;">Demander une démo</a>
+          <% end %>
           <!-- Button trigger modal -->
           <!-- Modal -->
           <div class="modal fade" id="luma-opt-in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
