@@ -104,7 +104,7 @@ $cardHeight: auto;
     &:after {
       position: absolute;
       content: "";
-      bottom: -12px;
+      bottom: -20px;
       left: 10px;
       width: 60px;
       height: 3px;
@@ -117,9 +117,9 @@ $cardHeight: auto;
 
   .genre {
     color: $light-gray;
-    margin-top: 1.2rem;
+    margin-top: 1.3rem;
     padding-left: 10px;
-    font-size: 16px;
+    font-size: 15px;
     transition: $transition;
   }
 
@@ -222,10 +222,10 @@ $cardHeight: auto;
 
 
     &:after {
-      width: 85%;
+      width: 167%;
       transform: translateX(-20px);
       transition-delay: 0.2s;
-      transition: transform 0.3s ease, width 3s ease-in;
+      transition: transform 0.3s ease, width 1.5s ease-in;
     }
 
   }
