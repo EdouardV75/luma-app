@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 Post.destroy_all
 User.destroy_all
 Company.destroy_all
@@ -67,7 +60,7 @@ Experience.create!(name: "Un pass de 10 places de cinéma",
 )
 
 # Jeux
-Experience.create!(name: 'Les meilleurs Escapes Games',
+Experience.create!(name: 'Un Escape Game en équipe',
   price: '69',
   public_price: '110',
   validity_date: '2019-12-31',
@@ -139,6 +132,29 @@ Experience.create!(name: "Offrez un arbre",
   partner_description: "En achetant des arbres, vous devenez propriétaire d’un actif forestier. L’arbre, en grandissant, est un bien qui prend intrinsèquement de la valeur avec le temps indépendamment de la demande ou du cours du bois 🌳",
   partner_name: 'Ecotree',
   photo_experience: 'ecotree_xp.jpg',
+)
+
+Experience.create!(name: "Un cactus personnalisé",
+  price: '19',
+  public_price: '29',
+  validity_date: '2019-12-31',
+  description: "Fait maison, cette collection arbore des motifs doux et chic … pour dire des mots doux avec un cactus, une plante ou une fleur ou bien pour apporter une petite touche exotique à votre intérieur. Ce modèle PASSIONNÉE est parfait pour végétaliser votre chez-vous, à votre image !",
+  partner_logo: 'aycactus_logo.png',
+  category: nature,
+  partner_name: 'Ay Cactus',
+  photo_experience: 'aycactus_xp.jpg',
+)
+
+Experience.create!(name: "L'oiseau de paradis: une belle plante livrée chez vous",
+  price: '29',
+  public_price: '49',
+  validity_date: '2019-12-31',
+  description: "L’Oiseau du Paradis est une plante incroyable au charisme fou. Originaire d’Afrique du Sud, cette plante exotique de la famille du bananier pousse dans son environnement naturel généralement au bord de l’eau. Cette superbe plante au feuillage large et vert intense doit son surnom à sa fleur remarquable dont la forme et les couleurs flamboyantes rappellent la tête d’un oiseau tropical. Nous l’adorons, c’est un must : belle, super facile à vivre, hyper robuste. Effet WOW assuré dans tous les intérieurs !
+",
+  partner_logo: 'akagreen_logo.png',
+  category: nature,
+  partner_name: 'Akagreen',
+  photo_experience: 'akagreen_xp.jpg',
 )
 
 #Beauté
@@ -313,5 +329,18 @@ Experience.create!(name: "Une session sportive avec un coach",
   partner_description: "Trouver un entraîneur personnel dans la zone géographique de son choix est souvent difficile. TrainMe facilite grandement cette démarche en donnant à l’offre une visibilité par ville et par quartier. Grâce à l’application, l’offre gagne aussi en clarté : d’un coup d’œil, on peut voir les coachs sportifs par discipline et avoir une idée des tarifs – ainsi que les avis des autres utilisateurs. Le paiement se fait en suite de manière simple, rapide et sécurisé directement sur la plateforme.",
   photo_experience: 'trainme_xp.jpg',
 )
+
+Experience.create!(name: "Une session d'escalade",
+  price: '7',
+  public_price: '14',
+  validity_date: '2019-12-31',
+  description: "Bénéficiez d'une séance d'escalade dans l'une des dix salles de notre partenaire Arkose!",
+  partner_logo: 'arkose_logo.png',
+  category: sport,
+  partner_name: 'Arkose',
+  photo_experience: 'arkose_xp.jpg',
+)
+
+
 
 puts 'Done!'
