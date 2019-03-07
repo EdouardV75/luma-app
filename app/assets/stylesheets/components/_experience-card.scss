@@ -287,6 +287,7 @@ $cardHeight: auto;
     opacity: 0.9;
     margin-top: 5px;
     margin-bottom: 3px;
+    
   }
 
   h4 {
@@ -302,6 +303,7 @@ $cardHeight: auto;
 }
 
 .fix-top-right {
+<<<<<<< Updated upstream
     top: -10px;
     right: -11px;
     position: absolute !important;
@@ -314,4 +316,10 @@ $cardHeight: auto;
     background-color: white;
     background-opacity: 0.8;
 
+=======
+    top: 5px;
+    right: 5px;
+    position: absolute !important;
+    margin: 10px; 
+>>>>>>> Stashed changes
 }
