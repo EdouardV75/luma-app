@@ -28,11 +28,23 @@
                       <p><%= experience.validity_date.strftime("%d/%m/%y") %></p>
                     </div>
                     <div class="stars">
-                      <i class="fas fa-star stars"></i>
-                      <i class="fas fa-star stars"></i>
-                      <i class="fas fa-star stars"></i>
-                      <i class="fas fa-star stars"></i>
-                      <i class="fas fa-star-half-alt stars"></i>
+                      <% stars = rand(3..5) %>
+                      <% if stars < 5 %>
+                        <% stars.times do %>
+                        <i class="fas fa-star stars"></i>
+                        <% end %>
+                        <% half = rand(0..1)%>
+                        <% if half == 1 %>
+                          <i class="fas fa-star-half-alt stars"></i>
+                        <% end %>
+                        <% (5 - (stars + half)).times do %>
+                          <i class="far fa-star stars"></i>
+                        <% end %>
+                      <% else %>
+                        <% 5.times do %>
+                          <i class="fas fa-star stars"></i>
+                        <% end %>
+                      <% end %>
                     </div>
                   </div>
                   <p class="text-autocrop"> <%= experience.description %> </p>

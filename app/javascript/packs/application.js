@@ -7,8 +7,11 @@ import { selectTab } from '../components/tab.js';
 import { initUpdateNavbarOnScroll } from '../components/navbar.js';
 
 
+
 initUpdateNavbarOnScroll();
 loadDynamicBannerText();
 homeWrapper();
 findCategory();
 selectTab();
+
+

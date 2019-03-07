@@ -7,13 +7,12 @@ $cardHeight: auto;
   justify-content: space-between;
   font-family: $body-font;
   display: flex;
-  position: static;
-  min-height: calc(100vh - 130px);
   background-color: white;
+  padding-bottom: 40px;
 }
 
 .container-cards {
-  padding-top: 35px;
+  padding-top: 20px;
   margin-right: auto;
   margin-left: auto;
   width: 85%;
@@ -34,7 +33,7 @@ $cardHeight: auto;
   transition: $transition;
   transform: scale(0.95);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.03);
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 
 }
 
@@ -96,7 +95,7 @@ $cardHeight: auto;
     position: relative;
     color: white;
     // padding-bottom: 0.4rem;
-    padding-left: 10px;
+    padding-left: 15px;
     z-index: 200;
     transition: $transition;
     margin-top: 15px;
@@ -106,9 +105,9 @@ $cardHeight: auto;
     &:after {
       position: absolute;
       content: "";
-      bottom: -12px;
+      bottom: -13px;
       left: 10px;
-      width: 60px;
+      width: 0px;
       height: 3px;
       background: $light-blue;
       z-index: 100;
@@ -119,9 +118,9 @@ $cardHeight: auto;
 
   .genre {
     color: $light-gray;
-    margin-top: 1.2rem;
-    padding-left: 10px;
-    font-size: 16px;
+    margin-top: 0.6rem;
+    padding-left: 17px;
+    font-size: 15px;
     transition: $transition;
   }
 
@@ -224,10 +223,10 @@ $cardHeight: auto;
 
 
     &:after {
-      width: 85%;
+      width: 167%;
       transform: translateX(-20px);
       transition-delay: 0.2s;
-      transition: transform 0.3s ease, width 3s ease-in;
+      transition: transform 0.3s ease, width 1.5s ease-in;
     }
 
   }
