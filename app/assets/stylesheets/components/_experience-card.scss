@@ -281,11 +281,11 @@ $cardHeight: auto;
 .price-container {
   position: relative;
   h3 {
-    color: $dark-blue;
+    color: white;
     font-weight: normal;
-    font-size: 16px;
-    opacity: 0.9;
-    margin-top: 5px;
+    font-size: 25px;
+    opacity: 1;
+    margin-top: 0;
     margin-bottom: 3px;
     
   }
@@ -293,33 +293,18 @@ $cardHeight: auto;
   h4 {
   color: white;
   font-weight: normal;
-  font-size: 14px;
-  opacity: 0.7;
+  font-size: 18px;
+  opacity: 1;
   margin-top: 0;
   text-decoration: line-through;
   text-align: right;
-  margin-right: 5px;
   }
 }
 
 .fix-top-right {
-<<<<<<< Updated upstream
-    top: -10px;
-    right: -11px;
-    position: absolute !important;
-    margin: 10px;
-    border-bottom-left-radius: 5px;
-    border-top-right-radius: 5px;
-    width: 77px;
-    text-align: center;
-    height: 28px;
-    background-color: white;
-    background-opacity: 0.8;
-
-=======
     top: 5px;
     right: 5px;
     position: absolute !important;
     margin: 10px; 
->>>>>>> Stashed changes
+
 }
