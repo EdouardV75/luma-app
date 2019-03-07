@@ -7,7 +7,7 @@
       <div class="results-card" data-category="<%= experience.category.name %>">
         <div class="col-xs-12 col-sm-6 col-lg-4">
           <li class="experience-card" >
-            <div class="card-image" style="background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url('<%= image_path experience.photo_experience %>');"></div>
+            <div class="card-image" style="background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), radial-gradient(circle at top right, rgba(50, 50, 50,0.7) 0%, rgba(80, 80, 80, 0.0)35%), url('<%= image_path experience.photo_experience %>');"></div>
             <div class="price-container fix-top-right block">
               <h3><%= humanized_money(experience.price) %>€</h3>
 <<<<<<< Updated upstream
@@ -23,7 +23,7 @@
                 <div class="title-container">
                   <h2 class="title fix-bottom"><%= "#{experience.name}"%></h2>
                 </div>
-                <p class="genre"><%= experience.category.name %></p>
+                <p class="genre"><%= experience.category.name %> <%= experience.category.emoji %></p>
                 <div class="desc">
                   <div class="rating">
                     <div class="experience-infos flex">
@@ -32,11 +32,23 @@
                       <p><%= experience.validity_date.strftime("%d/%m/%y") %></p>
                     </div>
                     <div class="stars">
-                      <i class="fas fa-star stars"></i>
-                      <i class="fas fa-star stars"></i>
-                      <i class="fas fa-star stars"></i>
-                      <i class="fas fa-star stars"></i>
-                      <i class="fas fa-star-half-alt stars"></i>
+                      <% stars = rand(3..5) %>
+                      <% if stars < 5 %>
+                        <% stars.times do %>
+                        <i class="fas fa-star stars"></i>
+                        <% end %>
+                        <% half = rand(0..1)%>
+                        <% if half == 1 %>
+                          <i class="fas fa-star-half-alt stars"></i>
+                        <% end %>
+                        <% (5 - (stars + half)).times do %>
+                          <i class="far fa-star stars"></i>
+                        <% end %>
+                      <% else %>
+                        <% 5.times do %>
+                          <i class="fas fa-star stars"></i>
+                        <% end %>
+                      <% end %>
                     </div>
                   </div>
                   <p class="text-autocrop"> <%= experience.description %> </p>
