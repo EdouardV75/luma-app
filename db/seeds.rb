@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 Post.destroy_all
 User.destroy_all
 Company.destroy_all
@@ -51,7 +44,7 @@ Experience.create!(name: "Une année avec les meilleurs films",
   category: cinema,
   partner_name: 'Mubi',
   partner_description: " Chaque jour, notre équipe de cinéphiles vous présente un film qu'elle adore, et vous disposez d'un mois pour le voir. Soit en permanence 30 fabuleux films à découvrir.",
-  photo_experience: 'mubi_xp.png',
+  photo_experience: 'mubi_xp.jpg',
 )
 
 Experience.create!(name: "Un pass de 10 places de Cinéma",
@@ -66,7 +59,7 @@ Experience.create!(name: "Un pass de 10 places de Cinéma",
 )
 
 # Jeux
-Experience.create!(name: 'Les meilleurs Escapes Games',
+Experience.create!(name: 'Un Escape Game en équipe',
   price: '69',
   public_price: '110',
   validity_date: '2019-12-31',
@@ -116,7 +109,7 @@ Experience.create!(name: "Un week-end en amoureux",
 )
 
 #Nature
-Experience.create!(name: "Adopte un corail",
+Experience.create!(name: "Adoptez un corail",
   price: '20',
   public_price: '30',
   validity_date: '2019-12-31',
@@ -127,7 +120,7 @@ Experience.create!(name: "Adopte un corail",
   photo_experience: 'coralguardian_xp.jpg',
 )
 
-Experience.create!(name: "Offre un arbre",
+Experience.create!(name: "Offrez un arbre",
   price: '69',
   public_price: '87',
   validity_date: '2019-12-31',
@@ -136,6 +129,29 @@ Experience.create!(name: "Offre un arbre",
   category: nature,
   partner_name: 'Ecotree',
   photo_experience: 'ecotree_xp.jpg',
+)
+
+Experience.create!(name: "Un cactus personnalisé",
+  price: '19',
+  public_price: '29',
+  validity_date: '2019-12-31',
+  description: "Fait maison, cette collection arbore des motifs doux et chic … pour dire des mots doux avec un cactus, une plante ou une fleur ou bien pour apporter une petite touche exotique à votre intérieur. Ce modèle PASSIONNÉE est parfait pour végétaliser votre chez-vous, à votre image !",
+  partner_logo: 'aycactus_logo.png',
+  category: nature,
+  partner_name: 'Ay Cactus',
+  photo_experience: 'aycactus_xp.jpg',
+)
+
+Experience.create!(name: "L'oiseau de paradis: une belle plante livrée chez vous",
+  price: '29',
+  public_price: '49',
+  validity_date: '2019-12-31',
+  description: "L’Oiseau du Paradis est une plante incroyable au charisme fou. Originaire d’Afrique du Sud, cette plante exotique de la famille du bananier pousse dans son environnement naturel généralement au bord de l’eau. Cette superbe plante au feuillage large et vert intense doit son surnom à sa fleur remarquable dont la forme et les couleurs flamboyantes rappellent la tête d’un oiseau tropical. Nous l’adorons, c’est un must : belle, super facile à vivre, hyper robuste. Effet WOW assuré dans tous les intérieurs !
+",
+  partner_logo: 'akagreen_logo.png',
+  category: nature,
+  partner_name: 'Akagreen',
+  photo_experience: 'akagreen_xp.jpg',
 )
 
 #Beauté
@@ -297,5 +313,18 @@ Experience.create!(name: "Une session pour le sport de votre choix avec un coach
   partner_name: 'Trainme',
   photo_experience: 'trainme_xp.jpg',
 )
+
+Experience.create!(name: "Une session d'escalade",
+  price: '7',
+  public_price: '14',
+  validity_date: '2019-12-31',
+  description: "Bénéficiez d'une séance d'escalade dans l'une des dix salles de notre partenaire Arkose!",
+  partner_logo: 'arkose_logo.png',
+  category: sport,
+  partner_name: 'Arkose',
+  photo_experience: 'arkose_xp.jpg',
+)
+
+
 
 puts 'Done!'
