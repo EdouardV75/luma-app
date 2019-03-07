@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 Post.destroy_all
 User.destroy_all
 Company.destroy_all
@@ -29,16 +22,15 @@ user5 = User.create!(email: "florent.lienard@lewagon.org", password: "azerty", f
 
 puts 'Creating categories...'
 
-cinema = Category.create!(name: 'Cinéma')
-jeux = Category.create!(name: 'Jeux')
-voyages = Category.create!(name: 'Voyages')
-nature = Category.create!(name: 'Nature')
-beaute = Category.create!(name: 'Beauté')
-deco = Category.create!(name: 'Déco')
-presse = Category.create!(name: 'Presse')
-culture = Category.create!(name: 'Culture')
-gastronomie = Category.create!(name: 'Gastronomie')
-sport = Category.create!(name: 'Sport')
+cinema = Category.create!(name: 'Cinéma', emoji:'🎬')
+jeux = Category.create!(name: 'Jeux', emoji:'🎯')
+voyages = Category.create!(name: 'Voyages', emoji:'🗺')
+nature = Category.create!(name: 'Nature', emoji:'🌿')
+beaute = Category.create!(name: 'Beauté', emoji:'💅')
+deco = Category.create!(name: 'Déco', emoji: '🖼')
+culture = Category.create!(name: 'Culture', emoji: '🎭')
+gastronomie = Category.create!(name: 'Fooding', emoji:'👨‍🍳')
+sport = Category.create!(name: 'Sport', emoji: '🧗‍♀️')
 
 puts 'Creating experiences...'
 
@@ -52,7 +44,7 @@ Experience.create!(name: "Une année avec les meilleurs films",
   category: cinema,
   partner_name: 'Mubi',
   partner_description: " Chaque jour, notre équipe de cinéphiles vous présente un film qu'elle adore, et vous disposez d'un mois pour le voir. Soit en permanence 30 fabuleux films à découvrir.",
-  photo_experience: 'mubi_xp.png',
+  photo_experience: 'mubi_xp.jpg',
 )
 
 Experience.create!(name: "Un pass de 10 places de cinéma",
@@ -68,7 +60,7 @@ Experience.create!(name: "Un pass de 10 places de cinéma",
 )
 
 # Jeux
-Experience.create!(name: 'Les meilleurs Escapes Games',
+Experience.create!(name: 'Un Escape Game en équipe',
   price: '69',
   public_price: '110',
   validity_date: '2019-12-31',
@@ -142,6 +134,29 @@ Experience.create!(name: "Offrez un arbre",
   photo_experience: 'ecotree_xp.jpg',
 )
 
+Experience.create!(name: "Un cactus personnalisé",
+  price: '19',
+  public_price: '29',
+  validity_date: '2019-12-31',
+  description: "Fait maison, cette collection arbore des motifs doux et chic … pour dire des mots doux avec un cactus, une plante ou une fleur ou bien pour apporter une petite touche exotique à votre intérieur. Ce modèle PASSIONNÉE est parfait pour végétaliser votre chez-vous, à votre image !",
+  partner_logo: 'aycactus_logo.png',
+  category: nature,
+  partner_name: 'Ay Cactus',
+  photo_experience: 'aycactus_xp.jpg',
+)
+
+Experience.create!(name: "L'oiseau de paradis: une belle plante livrée chez vous",
+  price: '29',
+  public_price: '49',
+  validity_date: '2019-12-31',
+  description: "L’Oiseau du Paradis est une plante incroyable au charisme fou. Originaire d’Afrique du Sud, cette plante exotique de la famille du bananier pousse dans son environnement naturel généralement au bord de l’eau. Cette superbe plante au feuillage large et vert intense doit son surnom à sa fleur remarquable dont la forme et les couleurs flamboyantes rappellent la tête d’un oiseau tropical. Nous l’adorons, c’est un must : belle, super facile à vivre, hyper robuste. Effet WOW assuré dans tous les intérieurs !
+",
+  partner_logo: 'akagreen_logo.png',
+  category: nature,
+  partner_name: 'Akagreen',
+  photo_experience: 'akagreen_xp.jpg',
+)
+
 #Beauté
 Experience.create!(name: "Votre box beauté",
   price: '8',
@@ -205,17 +220,16 @@ Experience.create!(name: "Une photographie en édition limitée",
 )
 
 #Presse
-Experience.create!(name: "Un abonnement annuel Usbek & Rica",
-  price: '18',
-  public_price: '24',
-  validity_date: '2019-12-31',
-  description: "Un abonnement annuel comprenant trois numéros du magazine, avec livraison en France.",
-  partner_logo: 'usbekrica_logo.png',
-  category: presse,
-  partner_description: "Le magazine qui explore le futur. Tous les futurs : ceux qui nous font peur et ceux dont on rêve.",
-  partner_name: 'Usbek & Rica',
-  photo_experience: 'usbekrica_xp.jpg',
-)
+# Experience.create!(name: "Un abonnement annuel pour Usbek & Rica",
+#   price: '18',
+#   public_price: '24',
+#   validity_date: '2019-12-31',
+#   description: "Trois numéros du magazine. Le magazine qui explore le futur. Tous les futurs : ceux qui nous font peur et ceux dont on rêve.",
+#   partner_logo: 'usbekrica_logo.png',
+#   category: presse,
+#   partner_name: 'Usbek & Rica',
+#   photo_experience: 'usbekrica_xp.jpg',
+# )
 
 #Culture
 Experience.create!(name: "Le meilleur de la culture",
@@ -284,7 +298,7 @@ Experience.create!(name: "Le meilleur du café livré chez vous",
   public_price: '9.90',
   validity_date: '2019-12-31',
   description: "Dégustez un café sélectionné par l'équipe Kawa: recevez par la poste un sachet de 200g parmi l'ensemble de la selection.",
-  partner_logo: 'kawa.png',
+  partner_logo: 'kawa_logo.jpg',
   category: gastronomie,
   partner_description: "Kawa c'est votre café livré à domicile, en direct des producteurs, et torréfié artisanalement.",
   partner_name: 'Kawa',
@@ -315,5 +329,18 @@ Experience.create!(name: "Une session sportive avec un coach",
   partner_description: "Trouver un entraîneur personnel dans la zone géographique de son choix est souvent difficile. TrainMe facilite grandement cette démarche en donnant à l’offre une visibilité par ville et par quartier. Grâce à l’application, l’offre gagne aussi en clarté : d’un coup d’œil, on peut voir les coachs sportifs par discipline et avoir une idée des tarifs – ainsi que les avis des autres utilisateurs. Le paiement se fait en suite de manière simple, rapide et sécurisé directement sur la plateforme.",
   photo_experience: 'trainme_xp.jpg',
 )
+
+Experience.create!(name: "Une session d'escalade",
+  price: '7',
+  public_price: '14',
+  validity_date: '2019-12-31',
+  description: "Bénéficiez d'une séance d'escalade dans l'une des dix salles de notre partenaire Arkose!",
+  partner_logo: 'arkose_logo.png',
+  category: sport,
+  partner_name: 'Arkose',
+  photo_experience: 'arkose_xp.jpg',
+)
+
+
 
 puts 'Done!'

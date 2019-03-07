@@ -12,6 +12,11 @@
 
 // COLONNE DE GAUCHE
 
+.sticky {
+  position: sticky !important;
+  top: 70px !important;
+}
+
 .experience-card-show {
   margin-right: 20px;
   margin-left: 20px;
@@ -91,11 +96,12 @@
 
 // COLONNE DE DROITE
 
+
+
 .experience {
   box-shadow: 0 5px 15px -5px rgba(0,0,0,0.15);
   background: white;
   border-radius: 3px;
-
 }
 
 .experience-details-show {
@@ -132,8 +138,7 @@
     left: -9%;
     width: 200px;
     height: 200Px;
-    background-color: $gray; /* fallback */
-    background-color: $gray;
+    background-color: #8C9FB9; /* fallback */
     top: -49px;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -181,6 +186,7 @@
 
 .experience-infos-show {
   padding: 30px;
+  background-color: white;
 }
 
 
@@ -249,10 +255,11 @@
 }
 
 .stripe {
-  height: 45px;
+  height: 56px;
   border-radius: 0px 0px 5px 5px !important;
   &:hover button.stripe-button-el span {
-    color: $light-blue;
+  background-image: $dark-blue !important;
+  background: $dark-blue !important;
   }
 }
 
@@ -260,7 +267,7 @@ button.stripe-button-el {
   width: 100% !important;
   height: 100% !important;
   border: none !important;
-  background-image: $dark-blue !important;
+  background-image: #008A8A !important;
   border-radius: 0px !important;
   padding: 0px !important;
   border-radius: 0px 0px 3px 3px !important;
@@ -270,13 +277,13 @@ button.stripe-button-el {
 button.stripe-button-el span {
   width: 100% !important;
   height: 100% !important;
-  background-image: $dark-blue !important;
-  background: $dark-blue !important;
+  background-image: #008A8A !important;
+  background: #008A8A !important;
   border-radius: 0px 0px 3px 3px !important;
   border: none !important;
   height: 40px;
   font-family: $body-font;
   font-size: 18px;
-  padding-top: 15px;
-  padding-bottom: 10px;
+  padding-top: 14px;
+  padding-bottom: 12px;
 }
