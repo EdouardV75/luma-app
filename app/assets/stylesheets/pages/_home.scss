@@ -174,7 +174,7 @@ $prefixes : ('webkit','moz','ms','o');
     border-radius:3px;
     @include prefix(box-shadow,0px 8px 15px rgba(0,0,0,.2));
     @include prefix(transform,scale(1));
-    @include prefix(transition,all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55));
+    @include prefix(transition,all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55));
     &:nth-child(1){
       background-image: linear-gradient(135deg, #699BBC 10%, #163487 72%);
     }
@@ -186,7 +186,7 @@ $prefixes : ('webkit','moz','ms','o');
       background-image: linear-gradient(135deg, #699BBC 10%, #163487 72%);
     }
     &:hover{
-      @include prefix(transform,scale(1.1));
+      @include prefix(transform,scale(1.02));
       z-index:100;
     }
   }
