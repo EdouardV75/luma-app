@@ -65,3 +65,17 @@
     right: 0px;
   }
 }
+
+.selectedTab {
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: -1px;
+    height: 3px;
+    background: $dark-blue;
+    opacity: 1;
+  }
+}

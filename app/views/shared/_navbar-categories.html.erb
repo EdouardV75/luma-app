@@ -1,12 +1,25 @@
 <div class="navbar-categories">
   <div class="category-container">
     <ul class="tabs-category flex">
-      <%= link_to experiences_path, class: "accent-bottom-line" do %>
-      <li class="tab-category">Tous</li>
+      <% if params[:category].present? %>
+        <%= link_to experiences_path, class: "accent-bottom-line" do %>
+        <li class="tab-category">Tous</li>
+        <% end %>
+      <% else %>
+        <%= link_to experiences_path, class: "accent-bottom-line" do %>
+        <li class="tab-category selectedTab">Tous</li>
+        <% end %>
       <% end %>
+
       <% Category.all.each do |category| %>
-        <%= link_to experiences_path(category: category.name), class: "accent-bottom-line" do %>
-          <li class="tab-category"><%= category.name %></li>
+        <% if params[:category] == category.name %>
+          <%= link_to experiences_path(category: category.name), class: "accent-bottom-line" do %>
+            <li class="tab-category selectedTab"><%= category.name %></li>
+          <% end %>
+        <% else %>
+          <%= link_to experiences_path(category: category.name), class: "accent-bottom-line" do %>
+            <li class="tab-category"><%= category.name %></li>
+          <% end %>
         <% end %>
       <% end %>
     </ul>
