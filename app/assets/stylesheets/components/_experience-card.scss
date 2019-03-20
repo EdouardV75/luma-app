@@ -288,6 +288,7 @@ $cardHeight: auto;
     opacity: 1;
     margin-top: 0;
     margin-bottom: 3px;
+    
   }
 
   h4 {
@@ -302,8 +303,8 @@ $cardHeight: auto;
 }
 
 .fix-top-right {
-  top: 5px;
-  right: 5px;
-  position: absolute !important;
-  margin: 10px;
+    top: 5px;
+    right: 5px;
+    position: absolute !important;
+    margin: 10px; 
 }

@@ -25,7 +25,6 @@ gem 'postmark-rails'
 gem 'rails-i18n', '5.1.3'
 
 gem 'devise_invitable', '~> 2.0.0'
-gem 'postmark-rails'
 gem 'sidekiq'
 gem 'sidekiq-failures', '~> 1.0'
 

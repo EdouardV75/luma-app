@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :experiences, through: :orders
   belongs_to :company
+  validates :first_name, :last_name, presence: true
 
   # after_create :send_welcome_email
   after_invitation_accepted :send_welcome_email
